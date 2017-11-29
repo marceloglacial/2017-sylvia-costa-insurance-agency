@@ -1,0 +1,23 @@
+{
+  "name": "sfcosta-xhtml",
+  "version": "1.0.0",
+  "description": "Sylvia Costa Insurance Agency Website static page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/glacial/sfcosta-xhtml.git"
+  },
+  "author": "Marcelo Glacial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/glacial/sfcosta-xhtml/issues"
+  },
+  "homepage": "https://gitlab.com/glacial/sfcosta-xhtml#README",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}

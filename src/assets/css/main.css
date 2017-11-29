@@ -1,0 +1,50 @@
+/* 
+
+Title: Snowflake Boilerplate
+Author: Marcelo Glacial
+Author URL: http://marceloglacial.com
+Starts on: 09/05/2017
+
+*/
+
+
+/* General  
+=======================================================
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background: black;
+    color: white; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-overflow: ellipsis;
+}
+
+
+/*
+Responsive Mode (320, 768, 1024, 1200)
+=======================================================
+*/
+
+@media (min-width: 1400px) {
+    /* Big Screens */
+}
+
+@media (max-width: 1112px) {
+    /* iPad Pro */
+}
+
+@media (max-width: 768px) {
+    /* Big Phones */
+}
+
+@media (max-width: 320px) {
+    /* Small Phones  */
+}
