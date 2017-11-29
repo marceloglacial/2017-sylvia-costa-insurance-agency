@@ -28,6 +28,30 @@ h6 {
 }
 
 
+/* 
+Header 
+=======================================================
+*/
+
+header {
+    background: url("../img/hero-bg.png") no-repeat center;
+    background-size: cover;
+}
+
+#logo {
+    background: url("../img/logo-white.png") no-repeat top center;
+    background-size: contain;
+    width: 80%;
+    min-height: 200px;
+    margin: 100px auto 0 auto;
+}
+
+#logo h1,
+#logo p {
+    display: none;
+}
+
+
 /*
 Responsive Mode (320, 768, 1024, 1200)
 =======================================================
@@ -35,6 +59,9 @@ Responsive Mode (320, 768, 1024, 1200)
 
 @media (min-width: 1400px) {
     /* Big Screens */
+    #wrapper {
+        max-width: 1400px;
+    }
 }
 
 @media (max-width: 1112px) {
