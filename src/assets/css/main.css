@@ -35,7 +35,7 @@ Hero
 */
 
 header {
-    background: url("../img/hero-bg.png") no-repeat center top;
+    background: url("../img/hero-bg.png") no-repeat center top #F2F2F2;
     background-size: cover;
     height: 650px;
     position: relative;
@@ -72,7 +72,7 @@ header {
     padding: 0;
     max-width: 490px;
     box-shadow: 0px 2px 70px #B1B1B1;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 130%;
 }
 
@@ -97,6 +97,37 @@ header {
 }
 
 
+/* 
+About Us 
+=======================================================
+*/
+
+#about-us .moto {
+    background: url("../img/about-us-bg.png") no-repeat center bottom;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+
+#about-us article {
+    text-align: center;
+    width: 40%;
+    font-weight: 100;
+    font-size: 120%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+#about-us h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 400%;
+    letter-spacing: -4px;
+}
+
+
 /*
 Responsive Mode (320, 768, 1024, 1200)
 =======================================================
@@ -113,14 +144,20 @@ Responsive Mode (320, 768, 1024, 1200)
     /* iPad  */
 }
 
-@media (max-width: 768px) {
-    /* Big Phones */
+@media (max-width: 550px) {
+    /* Big Phones - Prevent landscape issue */
     header {
         background-size: 200%;
         height: 430px;
     }
     #logo {
         top: 39%;
+    }
+    #about-us article {
+        width: 80%;
+    }
+    #about-us h2 {
+        letter-spacing: -10px;
     }
 }
 
