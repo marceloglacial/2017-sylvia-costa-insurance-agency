@@ -223,11 +223,24 @@ Responsive Mode (320, 768, 1024, 1200)
     #logo {
         top: 39%;
     }
+    #about-us #moto {
+        height: 500px;
+    }
     #about-us article {
         width: 80%;
     }
     #about-us h2 {
         letter-spacing: -10px;
+    }
+    #team figure {
+        width: 100%;
+        height: 400px;
+    }
+    #team figcaption {
+        top: 215px;
+    }
+    #team img {
+        max-width: 100%;
     }
 }
 
