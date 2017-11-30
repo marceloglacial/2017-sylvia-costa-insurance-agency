@@ -71,7 +71,7 @@ header {
     margin: 0 auto;
     padding: 0;
     max-width: 490px;
-    box-shadow: 0px 2px 70px #B1B1B1;
+    box-shadow: 0px 2px 70px #666;
     font-weight: 900;
     font-size: 130%;
 }
@@ -102,7 +102,7 @@ About Us
 =======================================================
 */
 
-#about-us .moto {
+#about-us #moto {
     background: url("../img/about-us-bg.png") no-repeat center bottom;
     background-size: cover;
     height: 600px;
@@ -126,6 +126,57 @@ About Us
     font-size: 400%;
     letter-spacing: -4px;
 }
+
+
+/* 
+Team 
+=======================================================
+*/
+
+#team {
+    padding: 100px 0;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#team figure {
+    position: relative;
+    margin: 0 auto;
+}
+
+#team img {
+    max-width: 260px;
+    box-shadow: 0px 2px 20px #444;
+}
+
+#team figcaption {
+    background: #FFF;
+    padding: 25px 20px 30px 40px;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 290px;
+    min-height: 350px;
+    z-index: 9999;
+}
+#team h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 250%;
+    letter-spacing: -3px;
+}
+#team p {
+    font-size: 120%;
+    font-weight: 200;
+    line-height: 170%;
+}
+#team figure:last-child {
+    margin-top: 80px;
+}
+
+
+
 
 
 /*
