@@ -17,6 +17,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    color: #4A4A4A;
 }
 
 h1,
@@ -25,6 +26,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'Josefin Sans', sans-serif;
     text-overflow: ellipsis;
 }
 
@@ -121,7 +123,6 @@ About Us
 }
 
 #about-us h2 {
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
     font-size: 400%;
     letter-spacing: -4px;
@@ -149,7 +150,7 @@ Team
 
 #team img {
     max-width: 260px;
-    box-shadow: 0px 2px 20px #444;
+    box-shadow: 0px 2px 20px #666;
 }
 
 #team figcaption {
@@ -164,7 +165,6 @@ Team
 }
 
 #team h3 {
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
     font-size: 250%;
     letter-spacing: -3px;
@@ -180,6 +180,53 @@ Team
 
 #team div:last-child {
     margin-top: 80px;
+}
+
+
+/*
+Contact Us 
+=======================================================
+*/
+
+#contact-us #form {
+    background: url("../img/contact-bg.png") no-repeat fixed right bottom;
+    background-size: cover;
+}
+
+#contact-us #form form {
+    width: 90%;
+    height: 800px;
+    margin: 0 auto;
+    padding: 160px 30px 190px 30px;
+}
+
+#contact-us #form h2 {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 400%;
+    letter-spacing: -4px;
+}
+
+#contact-us #form button,
+#contact-us #form textarea,
+#contact-us #form input {
+    width: 50%;
+    padding: 30px;
+    color: #000;
+    font-weight: 200;
+    border-radius: 0;
+    border: none;
+}
+
+#contact-us #form button {
+    padding: 15px;
+    color: #FFF;
+    background: #9B9B9B;
+    text-transform: lowercase;
+}
+
+#contact-us #form button:hover {
+    background: #642832;
 }
 
 
@@ -238,9 +285,20 @@ Responsive Mode (320, 768, 1024, 1200)
     }
     #team figcaption {
         top: 215px;
+        padding-top: 18px;
     }
     #team img {
-        max-width: 100%;
+        max-width: 90%;
+    }
+    #contact-us #form {
+        background-attachment: initial;
+        text-align: center;
+    }
+    #contact-us #form button,
+    #contact-us #form textarea,
+    #contact-us #form input {
+        width: 100%;
+        font-weight: 400;
     }
 }
 
@@ -249,5 +307,19 @@ Responsive Mode (320, 768, 1024, 1200)
     header {
         background-size: 200%;
         height: 385px;
+    }
+    #team figcaption {
+        text-align: center;
+        width: 80%;
+        top: 180px;
+        right: 20px;
+        font-size: 67%;
+        padding: 5px 20px;
+    }
+    #contact-us #form h2 {
+        font-size: 350%;
+    }
+    #contact-us #form form{ 
+        padding: 100px 10px;
     }
 }
