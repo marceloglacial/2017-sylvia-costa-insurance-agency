@@ -46,7 +46,6 @@ header {
 #logo {
     background: url("../img/logo-white.png") no-repeat top center;
     background-size: contain;
-    width: 85%;
     height: 200px;
     position: absolute;
     top: 35%;
@@ -64,7 +63,6 @@ header {
     bottom: 0%;
     left: 50%;
     transform: translate(-50%, -0%);
-    min-width: 100%;
 }
 
 #services ul {
@@ -72,7 +70,6 @@ header {
     background: #FFF;
     margin: 0 auto;
     padding: 0;
-    max-width: 490px;
     box-shadow: 0px 2px 70px #666;
     font-weight: 900;
     font-size: 130%;
@@ -113,7 +110,6 @@ About Us
 
 #about-us article {
     text-align: center;
-    width: 40%;
     font-weight: 100;
     font-size: 120%;
     position: absolute;
@@ -128,112 +124,100 @@ About Us
     letter-spacing: -4px;
 }
 
-
-/* 
-Team 
-=======================================================
-*/
-
-#team {
-    padding: 100px 0;
-    position: relative;
+#about-us #team {
+    margin: 150px auto;
     width: 90%;
-    margin: 0 auto;
 }
 
-#team figure {
+#about-us #team figure {
     position: relative;
-    margin: 0 auto;
-    max-width: 520px;
-    height: 300px;
 }
 
-#team img {
-    max-width: 260px;
-    box-shadow: 0px 2px 20px #666;
-}
-
-#team figcaption {
-    background: #FFF;
-    z-index: 9999;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    max-width: 300px;
-    height: 275px;
-    padding: 25px 0 0 40px;
-}
-
-#team h3 {
-    font-weight: 700;
-    font-size: 250%;
-    letter-spacing: -3px;
-}
-
-#team p {
-    font-size: 120%;
-    font-weight: 200;
-    line-height: 180%;
-    max-height: 150px;
-    overflow: hidden;
-}
-
-#team div:last-child {
+#about-us #team div:last-child {
     margin-top: 80px;
 }
 
+#about-us #team img {
+    box-shadow: 0px 2px 20px #666;
+    padding: 0;
+    max-width: 300px;
+}
 
-/*
-Contact Us 
+#about-us #team figcaption {
+    background: #FFF;
+    margin-top: 40px;
+    left: -40px;
+    height: 280px;
+    overflow: hidden;
+    padding: 20px 0 0 40px
+}
+
+#about-us #team h3 {
+    font-weight: 700;
+    font-size: 220%;
+    letter-spacing: -2px;
+}
+
+#about-us #team p {
+    font-weight: 200;
+    line-height: 2em;
+    color: #444;
+}
+
+
+/* 
+Contact Us
 =======================================================
 */
 
 #contact-us #form {
-    background: url("../img/contact-bg.png") no-repeat fixed right bottom;
-    background-size: cover;
+    background: url("../img/contact-bg.png") no-repeat;
 }
 
 #contact-us #form form {
-    width: 90%;
-    height: 800px;
-    margin: 0 auto;
-    padding: 160px 30px 190px 30px;
+    margin: 100px auto 120px auto;
+    width: 88%;
 }
 
 #contact-us #form h2 {
-    color: #FFF;
     font-weight: 700;
-    font-size: 400%;
+    font-size: 420%;
     letter-spacing: -4px;
+    color: #FFF;
+    margin-bottom: -15px;
 }
 
-#contact-us #form button,
+#contact-us .form-group {
+    clear: both;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#contact-us #form input,
 #contact-us #form textarea,
-#contact-us #form input {
-    width: 50%;
-    padding: 30px;
-    color: #000;
-    font-weight: 200;
-    border-radius: 0;
+#contact-us #form button {
     border: none;
+    border-radius: 0;
+    padding: 30px;
+    font-weight: 200;
+    color: #444;
 }
 
 #contact-us #form button {
-    padding: 15px;
+    width: 100%;
     color: #FFF;
-    background: #9B9B9B;
+    background: #949494;
     text-transform: lowercase;
 }
 
 #contact-us #form button:hover {
-    background: #642832;
+    background: #CCC;
 }
 
-
-/*
-Map and Business Card
-=======================================================
-*/
+#contact-us #map,
+#contact-us #map .embed-responsive-16by9 iframe {
+    max-height: 550px;
+}
 
 #map h2 {
     display: none;
@@ -247,14 +231,13 @@ Map and Business Card
 
 #business-card address {
     position: absolute;
-    max-width: 560px;
-    height: 340px;
-    top: -220px;
-    left: 30px;
+    top: -200px;
     background: #FFF;
-    padding: 60px;
+    padding: 30px 60px;
+    margin: 0;
     text-align: center;
-    z-index: 9999;
+    color: #9B9B9B;
+    font-weight: 200;
 }
 
 #business-card h3 {
@@ -262,19 +245,23 @@ Map and Business Card
 }
 
 #business-card p {
-    color: #9B9B9B;
-    font-weight: 200;
-    max-width: 350px;
-    margin: 30px auto;
+    padding-top: 20px;
 }
 
 #business-card a {
     color: #9B9B9B;
 }
 
+
+/*
+Footer
+=======================================================
+*/
+
 footer {
     background: black;
-    height: 200px;
+    height: 300px;
+    padding-left: 60%;
 }
 
 
@@ -283,103 +270,21 @@ Responsive Mode (320, 768, 1024, 1200)
 =======================================================
 */
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     /* Big Screens */
     #wrapper {
-        max-width: 1366px;
+        max-width: 1280px;
     }
 }
 
-@media (max-width: 1112px) {
-    /* iPad and Pro */
-    #team figure {
-        width: 400px;
-        height: 300px;
-    }
-    #team figcaption {
-        width: 240px;
-        height: 240px;
-        font-size: 80%;
-    }
-    #team img {
-        max-width: 200px;
-    }
-    #team p {
-        height: 120px;
-    }
+@media (max-width: 992px) {
+    /* Tablets */
 }
 
-@media (max-width: 550px) {
-    /* Big Phones - Prevent landscape issue */
-    header {
-        background-size: 200%;
-        height: 430px;
-    }
-    #logo {
-        top: 39%;
-    }
-    #about-us #moto {
-        height: 500px;
-    }
-    #about-us article {
-        width: 80%;
-    }
-    #about-us h2 {
-        letter-spacing: -10px;
-    }
-    #team figure {
-        width: 100%;
-        height: 400px;
-    }
-    #team figcaption {
-        top: 215px;
-        padding-top: 18px;
-    }
-    #team img {
-        max-width: 90%;
-    }
-    #contact-us #form {
-        background-attachment: initial;
-        text-align: center;
-    }
-    #contact-us #form button,
-    #contact-us #form textarea,
-    #contact-us #form input {
-        width: 100%;
-        font-weight: 400;
-    }
-    #contact-us #map .embed-responsive-16by9 {
-        min-height: 340px;
-    }
-    #business-card address {
-        position: initial;
-        left: 0;
-        padding: 60px 20px 20px 20px;
-        height: 100%;
-    }
-    #business-card p {
-        font-weight: 400;
-    }
+@media (max-width: 768px) {
+    /* Big Phones */
 }
 
 @media (max-width: 320px) {
     /* Small Phones  */
-    header {
-        background-size: 200%;
-        height: 385px;
-    }
-    #team figcaption {
-        text-align: center;
-        width: 80%;
-        top: 180px;
-        right: 20px;
-        font-size: 67%;
-        padding: 5px 20px;
-    }
-    #contact-us #form h2 {
-        font-size: 350%;
-    }
-    #contact-us #form form {
-        padding: 100px 10px;
-    }
 }
