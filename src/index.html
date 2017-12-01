@@ -119,21 +119,26 @@
                     </div>
                 </div>
                 <!-- /map -->
-                <div id="business-card">
-                    <figure>
+                <div id="business-card" itemscope itemtype="http://schema.org/LocalBusiness">>
+                    <address>
                         <img src="assets/img/logo-dark.png" alt="Company Logo" class="img-responsive">
-                        <figcaption>
-                            <h3>Sylvia F. Costa</h3>
-                            <!-- <p>15 Montello Street / Brockton, MA / 02301 Tel: +1(508) 583.0022 / Fax +1(508) 583.7744 sfcostaIns@hotmail.com -->
-                            </p>
-                        </figcaption>
-                    </figure>
+                        <h3 itemprop="name">Sylvia F. Costa</h3>
+                        <p>15 Montello Street / Brockton / MA 02301
+                            <br/>
+                            <span itemprop="telephone">
+                                <a href="tel:+15085830022">Tel: +1(508) 583.0022</a>
+                            </span> /
+                            <a href="tel:+15085837744">Fax: +1(508) 583.7744</a>
+                            <br/>
+                            <a href="mailto:sfcostaIns@hotmail.com">sfcostaIns@hotmail.com</a>
+                        </p>
+                    </address>
                 </div>
                 <!-- /business-card -->
             </section>
             <!-- contact-us -->
         </main>
-        <footer>
+        <footer class="row">
             <nav>
                 <ul class="nav nav-pills">
                     <li role="presentation">
