@@ -150,7 +150,7 @@ Team
 
 #team img {
     max-width: 260px;
-    box-shadow: 0px 2px 20px #444;
+    box-shadow: 0px 2px 20px #666;
 }
 
 #team figcaption {
@@ -189,14 +189,15 @@ Contact Us
 */
 
 #contact-us #form {
-    background: url("../img/contact-bg.png") no-repeat fixed;
+    background: url("../img/contact-bg.png") no-repeat fixed right bottom;
     background-size: cover;
 }
 
 #contact-us #form form {
     width: 90%;
+    height: 800px;
     margin: 0 auto;
-    padding: 130px 30px 160px 30px;
+    padding: 160px 30px 190px 30px;
 }
 
 #contact-us #form h2 {
@@ -211,7 +212,7 @@ Contact Us
 #contact-us #form input {
     width: 50%;
     padding: 30px;
-    color: #999;
+    color: #000;
     font-weight: 200;
     border-radius: 0;
     border: none;
@@ -287,7 +288,17 @@ Responsive Mode (320, 768, 1024, 1200)
         padding-top: 18px;
     }
     #team img {
-        max-width: 100%;
+        max-width: 90%;
+    }
+    #contact-us #form {
+        background-attachment: initial;
+        text-align: center;
+    }
+    #contact-us #form button,
+    #contact-us #form textarea,
+    #contact-us #form input {
+        width: 100%;
+        font-weight: 400;
     }
 }
 
@@ -296,5 +307,19 @@ Responsive Mode (320, 768, 1024, 1200)
     header {
         background-size: 200%;
         height: 385px;
+    }
+    #team figcaption {
+        text-align: center;
+        width: 80%;
+        top: 180px;
+        right: 20px;
+        font-size: 67%;
+        padding: 5px 20px;
+    }
+    #contact-us #form h2 {
+        font-size: 350%;
+    }
+    #contact-us #form form{ 
+        padding: 100px 10px;
     }
 }
