@@ -171,7 +171,9 @@ Contact Us
 */
 
 #contact-us #form {
-    background: url("../img/contact-bg.png") no-repeat;
+    background: url("../img/contact-bg.png") no-repeat top right;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #contact-us #form form {
@@ -273,7 +275,7 @@ Responsive Mode (320, 768, 1024, 1200)
 @media (min-width: 1200px) {
     /* Big Screens */
     #wrapper {
-        max-width: 1280px;
+        /* max-width: 1280px; */
     }
 }
 
