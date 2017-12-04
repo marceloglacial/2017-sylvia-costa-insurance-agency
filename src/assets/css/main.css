@@ -30,6 +30,7 @@ h6 {
     text-overflow: ellipsis;
 }
 
+
 /* 
 Hero 
 =======================================================
@@ -318,7 +319,7 @@ footer nav ul.nav li a:hover {
 
 
 /*
-Responsive Mode (320, 768, 1024, 1200)
+Responsive Mode
 =======================================================
 */
 
@@ -334,13 +335,7 @@ Responsive Mode (320, 768, 1024, 1200)
 
 /* Medium devices (tablets, less than 992px) */
 
-@media (max-width: 991px) {}
-
-
-/* Small devices (landscape phones, less than 768px) */
-
-@media (max-width: 767px) {
-    /* Big Phones */
+@media (max-width: 991px) {
     #contact-us,
     #dev {
         text-align: center;
@@ -367,7 +362,6 @@ Responsive Mode (320, 768, 1024, 1200)
         padding: 50px 10px 20px 10px;
     }
     #contact-us #map iframe {
-        height: 500px !important;
     }
     footer nav ul.nav {
         margin-left: 0%;
@@ -375,15 +369,51 @@ Responsive Mode (320, 768, 1024, 1200)
 }
 
 
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767px) {
+    /* none */
+}
+
+
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575px) {
+    #wrapper {
+        font-size: 95%;
+    }
     header {
-        max-height: 340px;
+        max-height: 330px;
         background-image: url("../img/hero-bg-mobile.png");
         background-size: contain;
     }
     #logo {
         top: 40%;
+    }
+    #about-us #moto {
+        height: 400px;
+    }
+    #about-us h2 {
+        letter-spacing: -7px;
+    }
+    #about-us #team {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 75%;
+    }
+    #about-us #team figure {
+        height: 500px;
+    }
+    #about-us #team img {
+        max-width: 85%;
+    }
+    #about-us #team figcaption {
+        margin-top: 180px;
+        position: absolute;
+        height: 285px;
+        width: 110%;
+        margin-left: 12%;
+        overflow: hidden;
+        padding: 20px 40px 0 40px
     }
 }
