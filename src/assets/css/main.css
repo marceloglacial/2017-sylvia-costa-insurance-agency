@@ -216,9 +216,8 @@ Contact Us
     background: #CCC;
 }
 
-#contact-us #map,
-#contact-us #map .embed-responsive-16by9 iframe {
-    max-height: 550px;
+#contact-us #map iframe {
+    max-height: 760px;
 }
 
 #map h2 {
@@ -261,6 +260,7 @@ Footer
 */
 
 footer {
+    font-family: 'Josefin Sans', sans-serif;
     background: #642832;
 }
 
@@ -275,7 +275,6 @@ footer nav ul.nav {
 }
 
 footer nav ul.nav li a {
-    font-family: 'Josefin Sans', sans-serif;
     color: #FFF;
     font-weight: 700;
     text-transform: lowercase;
@@ -289,9 +288,21 @@ footer nav ul.nav li a:hover {
     background: #59232C;
 }
 
-footer #dev {
+#dev {
     background: #59232C;
-    clear: both;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+#dev a {
+    width: 88%;
+    display: block;
+    margin: 0 auto;
+    font-size: 150%;
+    color: rgba(255, 255, 255, 0.2);
+}
+#dev a:hover {
+color: #FFF;
 }
 
 
