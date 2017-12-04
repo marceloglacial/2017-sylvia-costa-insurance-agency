@@ -217,7 +217,7 @@ Contact Us
 }
 
 #contact-us #map iframe {
-    max-height: 760px;
+    max-height: 100%;
 }
 
 #map h2 {
@@ -232,7 +232,7 @@ Contact Us
 
 #business-card address {
     position: absolute;
-    top: -200px;
+    bottom: -74px;
     background: #FFF;
     padding: 40px 70px 30px 70px;
     margin: 0;
