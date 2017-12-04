@@ -274,14 +274,20 @@ footer nav ul.nav {
     margin-left: 50%;
 }
 
+footer nav ul.nav li {
+    padding: 0;
+}
+
 footer nav ul.nav li a {
     color: #FFF;
     font-weight: 700;
     text-transform: lowercase;
     font-size: 120%;
-    padding: 25px 69px;
     margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-radius: 0;
+    text-align: center;
 }
 
 footer nav ul.nav li a:hover {
@@ -291,7 +297,7 @@ footer nav ul.nav li a:hover {
 #dev {
     background: #59232C;
     margin: 0 auto;
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
 #dev a {
@@ -301,8 +307,10 @@ footer nav ul.nav li a:hover {
     font-size: 150%;
     color: rgba(255, 255, 255, 0.2);
 }
+
 #dev a:hover {
-color: #FFF;
+    color: #FFF;
+    text-decoration: none;
 }
 
 
