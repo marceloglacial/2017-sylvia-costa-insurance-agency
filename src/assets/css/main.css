@@ -235,7 +235,7 @@ Contact Us
     position: absolute;
     top: -200px;
     background: #FFF;
-    padding: 30px 60px;
+    padding: 40px 70px 30px 70px;
     margin: 0;
     text-align: center;
     color: #9B9B9B;
@@ -261,9 +261,37 @@ Footer
 */
 
 footer {
-    background: black;
-    height: 300px;
-    padding-left: 60%;
+    background: #642832;
+}
+
+footer .nav-pills {
+    /* flexbox to center pills */
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul.nav {
+    margin-left: 50%;
+}
+
+footer nav ul.nav li a {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 120%;
+    padding: 25px 69px;
+    margin: 0;
+    border-radius: 0;
+}
+
+footer nav ul.nav li a:hover {
+    background: #59232C;
+}
+
+footer #dev {
+    background: #59232C;
+    clear: both;
 }
 
 
