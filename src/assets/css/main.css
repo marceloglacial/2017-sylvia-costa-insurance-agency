@@ -361,7 +361,8 @@ Responsive Mode
         bottom: 0;
         padding: 50px 10px 20px 10px;
     }
-    #contact-us #map iframe {
+    #contact-us #map * {
+        height: 320px;
     }
     footer nav ul.nav {
         margin-left: 0%;
@@ -398,7 +399,7 @@ Responsive Mode
     }
     #about-us #team {
         margin-top: 100px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         width: 75%;
     }
     #about-us #team figure {
@@ -410,10 +411,9 @@ Responsive Mode
     #about-us #team figcaption {
         margin-top: 180px;
         position: absolute;
-        height: 285px;
         width: 110%;
+        max-height: 250px;
         margin-left: 12%;
-        overflow: hidden;
-        padding: 20px 40px 0 40px
+        padding: 10px 60px 0 30px
     }
 }
