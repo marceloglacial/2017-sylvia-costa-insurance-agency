@@ -30,7 +30,6 @@ h6 {
     text-overflow: ellipsis;
 }
 
-
 /* 
 Hero 
 =======================================================
@@ -323,21 +322,24 @@ Responsive Mode (320, 768, 1024, 1200)
 =======================================================
 */
 
-@media (min-width: 1200px) {
-    /* Big Screens */
-    #wrapper {
-        max-width: 1400px;
-    }
-}
 
-@media (max-width: 1024px) {
-    /* Tablets */
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199px) {
     #team figcaption {
         font-size: 90%;
     }
 }
 
-@media (max-width: 768px) {
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991px) {}
+
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767px) {
     /* Big Phones */
     #contact-us,
     #dev {
@@ -372,6 +374,16 @@ Responsive Mode (320, 768, 1024, 1200)
     }
 }
 
-@media (max-width: 320px) {
-    /* Small Phones  */
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575px) {
+    header {
+        max-height: 340px;
+        background-image: url("../img/hero-bg-mobile.png");
+        background-size: contain;
+    }
+    #logo {
+        top: 40%;
+    }
 }
