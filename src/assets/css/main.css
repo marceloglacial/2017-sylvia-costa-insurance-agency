@@ -131,10 +131,12 @@ About Us
 
 #about-us #team figure {
     position: relative;
+    min-height: 350px;
 }
 
 #about-us #team div:last-child {
     margin-top: 80px;
+    left: 50px;
 }
 
 #about-us #team img {
@@ -146,15 +148,17 @@ About Us
 #about-us #team figcaption {
     background: #FFF;
     margin-top: 40px;
-    left: -40px;
-    height: 280px;
+    position: absolute;
+    height: 285px;
+    width: 50%;
+    margin-left: 43%;
     overflow: hidden;
     padding: 20px 0 0 40px
 }
 
 #about-us #team h3 {
     font-weight: 700;
-    font-size: 220%;
+    font-size: 215%;
     letter-spacing: -2px;
 }
 
@@ -217,7 +221,7 @@ Contact Us
 }
 
 #contact-us #map iframe {
-    max-height: 760px;
+    max-height: 100%;
 }
 
 #map h2 {
@@ -232,7 +236,7 @@ Contact Us
 
 #business-card address {
     position: absolute;
-    top: -200px;
+    bottom: -74px;
     background: #FFF;
     padding: 40px 70px 30px 70px;
     margin: 0;
@@ -326,12 +330,46 @@ Responsive Mode (320, 768, 1024, 1200)
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     /* Tablets */
+    #team figcaption {
+        font-size: 90%;
+    }
 }
 
 @media (max-width: 768px) {
     /* Big Phones */
+    #contact-us,
+    #dev {
+        text-align: center;
+    }
+    #about-us p,
+    #about-us #team figcaption p,
+    #business-card address,
+    #contact-us #form form .form-group input,
+    #contact-us #form form .form-group textarea,
+    #contact-us #form form .form-group button {
+        font-weight: 400;
+    }
+    #about-us #team div:last-child {
+        left: 0;
+    }
+    #about-us #team figcaption {
+        width: 60%;
+        margin-left: 40%;
+    }
+    #business-card address {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        padding: 50px 10px 20px 10px;
+    }
+    #contact-us #map iframe {
+        height: 500px !important;
+    }
+    footer nav ul.nav {
+        margin-left: 0%;
+    }
 }
 
 @media (max-width: 320px) {
