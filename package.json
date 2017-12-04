@@ -18,6 +18,7 @@
   "homepage": "https://gitlab.com/glacial/sfcosta-xhtml#README",
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.0.0"
   }
 }
