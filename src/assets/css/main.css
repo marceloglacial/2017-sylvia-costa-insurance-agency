@@ -275,7 +275,7 @@ Responsive Mode (320, 768, 1024, 1200)
 @media (min-width: 1200px) {
     /* Big Screens */
     #wrapper {
-        /* max-width: 1280px; */
+        max-width: 1400px;
     }
 }
 
