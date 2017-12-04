@@ -417,3 +417,34 @@ Responsive Mode
         padding: 10px 60px 0 30px
     }
 }
+
+
+/* Extra Extra small devices (iphone 5s/se) */
+
+@media (max-width: 320px) {
+    #wrapper {
+        font-size: 70%;
+    }
+    #about-us #moto {
+        height: 300px;
+    }
+    #about-us #team {
+        margin-top: 50px;
+        width: 75%;
+    }
+    #about-us #team figure {
+        height: 350px;
+    }
+    #about-us #team figcaption {
+        margin-top: 140px;
+        position: absolute;
+        max-height: 200px;
+    }
+    #contact-us #form input,
+    #contact-us #form textarea {
+        padding: 25px;
+    }
+    #contact-us #form button {
+        padding: 15px;
+    }
+}
