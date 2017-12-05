@@ -323,6 +323,19 @@ Responsive Mode
 =======================================================
 */
 
+/* Iphone X */
+
+@supports(padding: max(0px)) {
+    footer {
+        padding-left: max(8px, env(safe-area-inset-left));
+        padding-right: max(8px, env(safe-area-inset-right));
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
+    main {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+}
 
 /* Large devices (desktops, less than 1200px) */
 
