@@ -1,0 +1,450 @@
+/* 
+
+Title: Snowflake Boilerplate
+Author: Marcelo Glacial
+Author URL: http://marceloglacial.com
+Starts on: 09/05/2017
+
+*/
+
+
+/* General  
+=======================================================
+*/
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #4A4A4A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-overflow: ellipsis;
+}
+
+
+/* 
+Hero 
+=======================================================
+*/
+
+header {
+    background: url("../img/hero-bg.png") no-repeat center top #F2F2F2;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+}
+
+#logo {
+    background: url("../img/logo-white.png") no-repeat top center;
+    background-size: contain;
+    height: 200px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+#logo h1,
+#logo p {
+    display: none;
+}
+
+#services {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+#services ul {
+    list-style: none;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0px 2px 70px #666;
+    font-weight: 900;
+    font-size: 130%;
+}
+
+#services ul li {
+    text-align: center;
+    padding: 90px 0 30px 0;
+}
+
+#services .auto {
+    background: url("../img/service-item-auto.png") no-repeat center 40px;
+    background-size: 45px;
+}
+
+#services .home {
+    background: url("../img/service-item-home.png") no-repeat center 40px;
+    background-size: 55px;
+}
+
+#services .business {
+    background: url("../img/service-item-business.png") no-repeat center 40px;
+    background-size: 65px;
+}
+
+
+/* 
+About Us 
+=======================================================
+*/
+
+#about-us #moto {
+    background: url("../img/about-us-bg.png") no-repeat center bottom;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+
+#about-us article {
+    text-align: center;
+    font-weight: 100;
+    font-size: 120%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+#about-us h2 {
+    font-weight: 700;
+    font-size: 400%;
+    letter-spacing: -4px;
+}
+
+#about-us #team {
+    margin: 150px auto;
+    width: 90%;
+}
+
+#about-us #team figure {
+    position: relative;
+    min-height: 350px;
+}
+
+#about-us #team div:last-child {
+    margin-top: 80px;
+    left: 50px;
+}
+
+#about-us #team img {
+    box-shadow: 0px 2px 20px #666;
+    padding: 0;
+    max-width: 300px;
+}
+
+#about-us #team figcaption {
+    background: #FFF;
+    margin-top: 40px;
+    position: absolute;
+    height: 285px;
+    width: 50%;
+    margin-left: 43%;
+    overflow: hidden;
+    padding: 20px 0 0 40px
+}
+
+#about-us #team h3 {
+    font-weight: 700;
+    font-size: 215%;
+    letter-spacing: -2px;
+}
+
+#about-us #team p {
+    font-weight: 200;
+    line-height: 2em;
+    color: #444;
+}
+
+
+/* 
+Contact Us
+=======================================================
+*/
+
+#contact-us #form {
+    background: url("../img/contact-bg.png") no-repeat top right;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#contact-us #form form {
+    margin: 100px auto 120px auto;
+    width: 88%;
+}
+
+#contact-us #form h2 {
+    font-weight: 700;
+    font-size: 420%;
+    letter-spacing: -4px;
+    color: #FFF;
+    margin-bottom: -15px;
+}
+
+#contact-us .form-group {
+    clear: both;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#contact-us #form input,
+#contact-us #form textarea,
+#contact-us #form button {
+    border: none;
+    border-radius: 0;
+    padding: 30px;
+    font-weight: 200;
+    color: #444;
+}
+
+#contact-us #form button {
+    width: 100%;
+    color: #FFF;
+    background: #949494;
+    text-transform: lowercase;
+}
+
+#contact-us #form button:hover {
+    background: #CCC;
+}
+
+#contact-us #map iframe {
+    max-height: 100%;
+}
+
+#map h2 {
+    display: none;
+}
+
+#business-card {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#business-card address {
+    position: absolute;
+    bottom: -74px;
+    background: #FFF;
+    padding: 40px 70px 30px 70px;
+    margin: 0;
+    text-align: center;
+    color: #9B9B9B;
+    font-weight: 200;
+}
+
+#business-card h3 {
+    display: none;
+}
+
+#business-card p {
+    padding-top: 20px;
+}
+
+#business-card a {
+    color: #9B9B9B;
+}
+
+
+/*
+Footer
+=======================================================
+*/
+
+footer {
+    font-family: 'Josefin Sans', sans-serif;
+    background: #642832;
+}
+
+footer .nav-pills {
+    /* flexbox to center pills */
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul.nav {
+    margin-left: 50%;
+}
+
+footer nav ul.nav li {
+    padding: 0;
+}
+
+footer nav ul.nav li a {
+    color: #FFF;
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 120%;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 0;
+    text-align: center;
+}
+
+footer nav ul.nav li a:hover {
+    background: #59232C;
+}
+
+#dev {
+    background: #59232C;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#dev a {
+    width: 88%;
+    display: block;
+    margin: 0 auto;
+    font-size: 150%;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+#dev a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+/*
+Responsive Mode
+=======================================================
+*/
+
+
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199px) {
+    #team figcaption {
+        font-size: 90%;
+    }
+}
+
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991px) {
+    #contact-us,
+    #dev {
+        text-align: center;
+    }
+    #about-us p,
+    #about-us #team figcaption p,
+    #business-card address,
+    #contact-us #form form .form-group input,
+    #contact-us #form form .form-group textarea,
+    #contact-us #form form .form-group button {
+        font-weight: 400;
+    }
+    #about-us #team div:last-child {
+        left: 0;
+    }
+    #about-us #team figcaption {
+        width: 60%;
+        margin-left: 40%;
+    }
+    #business-card address {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        padding: 50px 10px 20px 10px;
+    }
+    #contact-us #map * {
+        height: 320px;
+    }
+    footer nav ul.nav {
+        margin-left: 0%;
+    }
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767px) {
+    /* none */
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575px) {
+    #wrapper {
+        font-size: 95%;
+    }
+    header {
+        max-height: 330px;
+        background-image: url("../img/hero-bg-mobile.png");
+        background-size: contain;
+    }
+    #logo {
+        top: 40%;
+    }
+    #about-us #moto {
+        height: 400px;
+    }
+    #about-us h2 {
+        letter-spacing: -7px;
+    }
+    #about-us #team {
+        margin-top: 100px;
+        margin-bottom: 50px;
+        width: 75%;
+    }
+    #about-us #team figure {
+        height: 500px;
+    }
+    #about-us #team img {
+        max-width: 85%;
+    }
+    #about-us #team figcaption {
+        margin-top: 180px;
+        position: absolute;
+        width: 110%;
+        max-height: 250px;
+        margin-left: 12%;
+        padding: 10px 60px 0 30px
+    }
+}
+
+
+/* Extra Extra small devices (iphone 5s/se) */
+
+@media (max-width: 320px) {
+    #wrapper {
+        font-size: 70%;
+    }
+    #about-us #moto {
+        height: 300px;
+    }
+    #about-us #team {
+        margin-top: 50px;
+        width: 75%;
+    }
+    #about-us #team figure {
+        height: 350px;
+    }
+    #about-us #team figcaption {
+        margin-top: 140px;
+        position: absolute;
+        max-height: 200px;
+    }
+    #contact-us #form input,
+    #contact-us #form textarea {
+        padding: 25px;
+    }
+    #contact-us #form button {
+        padding: 15px;
+    }
+}

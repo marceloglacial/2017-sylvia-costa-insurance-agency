@@ -19,6 +19,13 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-imagemin": "^4.0.0"
+    "gulp-clean-css": "^3.9.0",
+    "gulp-copy": "^1.0.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-smushit": "^1.2.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "pump": "^2.0.0"
   }
 }
