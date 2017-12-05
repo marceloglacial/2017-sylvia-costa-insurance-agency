@@ -3,6 +3,7 @@ var del = require('del');
 var browserSync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
+var minifyHTML = require('gulp-minify-html');
 var pump = require('pump');
 var smushit = require('gulp-smushit');
 var autoprefixer = require('gulp-autoprefixer');
@@ -72,11 +73,21 @@ gulp.task('build-clean', function () {
     ]);
 });
 
+// Minify XHTML
+gulp.task('build-html', function() {
+    var opts = {comments:false,spare:true};
+    
+  gulp.src('./src/**/*.html')
+    .pipe(minifyHTML(opts))
+    .pipe(gulp.dest('./dist/'))
+});
+
 // Build
 gulp.task('build', gulpSequence(
     'build-clean',
     'build-copy',
     'build-css',
+    'build-html',
     'build-img',
     'build-serve'
 ));
