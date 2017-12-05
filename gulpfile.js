@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var del = require('del');
-var merge = require('merge-stream');
 var browserSync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
