@@ -17,4 +17,4 @@ iPhone: <https://marvelapp.com/4519i65/screen/34521238>
 
 ## Build
 
-<https://marceloglacial.github.io/sfcosta-xhtml/dist/index.html>
+<https://marceloglacial.github.io/sfcosta-xhtml/dist/>
