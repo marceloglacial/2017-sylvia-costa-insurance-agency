@@ -87,6 +87,7 @@ gulp.task('build', gulpSequence(
     'build-clean',
     'build-copy',
     'build-css',
+    'build-js',
     'build-html',
     'build-img',
     'build-serve'
