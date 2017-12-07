@@ -15,6 +15,12 @@ iPad: <https://marvelapp.com/71fg9be/screen/34521228>
 
 iPhone: <https://marvelapp.com/4519i65/screen/34521238>
 
-## Build
+## Performance Tests
+
+HTML5 Validator <https://validator.w3.org>
+
+![alt text](./docs/performance/performance-html5-validador.png "HTML5 Validator")
+
+## Final Build
 
 <https://marceloglacial.github.io/sfcosta-xhtml/dist/>
