@@ -7,7 +7,6 @@ Starts on: 11/29/2017
 
 */
 
-
 /* General  
 =======================================================
 */
@@ -29,7 +28,6 @@ h6 {
     font-family: 'Josefin Sans', sans-serif;
     text-overflow: ellipsis;
 }
-
 
 /* 
 Hero 
@@ -80,6 +78,14 @@ header {
     padding: 90px 0 30px 0;
 }
 
+#services ul li a {
+    color: #4A4A4A;
+}
+
+#services ul li a:hover {
+    background: none;
+}
+
 #services .auto {
     background: url("../img/service-item-auto.png") no-repeat center 40px;
     background-size: 45px;
@@ -94,7 +100,6 @@ header {
     background: url("../img/service-item-business.png") no-repeat center 40px;
     background-size: 65px;
 }
-
 
 /* 
 About Us 
@@ -168,7 +173,6 @@ About Us
     color: #444;
 }
 
-
 /* 
 Contact Us
 =======================================================
@@ -181,7 +185,7 @@ Contact Us
 }
 
 #contact-us #form form {
-    margin: 100px auto 120px auto;
+    margin: 0 auto 120px auto;
     width: 88%;
 }
 
@@ -190,13 +194,18 @@ Contact Us
     font-size: 420%;
     letter-spacing: -4px;
     color: #FFF;
-    margin-bottom: -15px;
+    width: 88%;
+    margin: 100px auto 0px auto;
 }
 
-#contact-us .form-group {
+#contact-us label {
+    display: none;
+}
+
+#contact-us form div {
     clear: both;
     padding: 0;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 #contact-us #form input,
@@ -210,10 +219,11 @@ Contact Us
 }
 
 #contact-us #form button {
-    width: 100%;
+    width: 50%;
     color: #FFF;
     background: #949494;
     text-transform: lowercase;
+    padding: 20px;
 }
 
 #contact-us #form button:hover {
@@ -245,7 +255,7 @@ Contact Us
     font-weight: 200;
 }
 
-#business-card h3 {
+#business-card strong {
     display: none;
 }
 
@@ -256,7 +266,6 @@ Contact Us
 #business-card a {
     color: #9B9B9B;
 }
-
 
 /*
 Footer
@@ -274,15 +283,17 @@ footer .nav-pills {
     justify-content: center;
 }
 
-footer nav ul.nav {
+footer ul.nav {
     margin-left: 50%;
 }
 
-footer nav ul.nav li {
+footer ul.nav li {
     padding: 0;
+    float: left;
+    width: 33.33%;
 }
 
-footer nav ul.nav li a {
+footer ul.nav li a {
     color: #FFF;
     font-weight: 700;
     text-transform: lowercase;
@@ -294,7 +305,7 @@ footer nav ul.nav li a {
     text-align: center;
 }
 
-footer nav ul.nav li a:hover {
+footer ul.nav li a:hover {
     background: #59232C;
 }
 
@@ -317,31 +328,17 @@ footer nav ul.nav li a:hover {
     text-decoration: none;
 }
 
-
 /*
 Responsive Mode
 =======================================================
 */
 
-
 /* Iphone X */
 
-header {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+#services {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
-
-@supports(padding: max(0px)) {
-    footer {
-        padding-left: max(8px, env(safe-area-inset-left));
-        padding-right: max(8px, env(safe-area-inset-right));
-        padding-bottom: max(8px, env(safe-area-inset-bottom));
-    }
-    main {
-        padding-left: max(12px, env(safe-area-inset-left));
-        padding-right: max(12px, env(safe-area-inset-right));
-    }
-}
-
 
 /* Large devices (desktops, less than 1200px) */
 
@@ -350,7 +347,6 @@ header {
         font-size: 90%;
     }
 }
-
 
 /* Medium devices (tablets, less than 992px) */
 
@@ -383,18 +379,19 @@ header {
     #contact-us #map * {
         height: 320px;
     }
-    footer nav ul.nav {
+    footer ul.nav {
         margin-left: 0%;
     }
+    #contact-us #form button {
+        width: 100%;
+    }
 }
-
 
 /* Small devices (landscape phones, less than 768px) */
 
 @media (max-width: 767px) {
     /* none */
 }
-
 
 /* Extra small devices (portrait phones, less than 576px) */
 
@@ -436,7 +433,6 @@ header {
         padding: 10px 60px 0 30px
     }
 }
-
 
 /* Extra Extra small devices (iphone 5s/se) */
 
