@@ -23,12 +23,12 @@
 
 ### HTML5 Validator: <https://validator.w3.org>
 
- ![alt text](./front-end/docs/performance/performance-html5-validador.png "results")
+ ![alt text](./docs/performance/performance-html5-validador.png "results")
 
 ### Google Mobile Speed Test: <https://testmysite.thinkwithgoogle.com/>
 
- ![alt text](./front-end/docs/performance/performance-google-mobile.png "results")
+ ![alt text](./docs/performance/performance-google-mobile.png "results")
 
 ### Google Page Speed Insights: <https://developers.google.com/speed/pagespeed/insights/>
 
- ![alt text](./front-end/docs/performance/performance-google-insights.png "results")
+ ![alt text](./docs/performance/performance-google-insights.png "results")
