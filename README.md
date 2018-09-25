@@ -5,7 +5,7 @@
 
 ## Final Build
 
-* <https://marceloglacial.github.io/sfcosta-xhtml/dist/>
+* <https://marceloglacial.github.io/sfcosta-xhtml/front-end/dist/>
 
 ## Design
 
@@ -23,12 +23,12 @@
 
 ### HTML5 Validator: <https://validator.w3.org>
 
- ![alt text](./docs/performance/performance-html5-validador.png "results")
+ ![alt text](./front-end/docs/performance/performance-html5-validador.png "results")
 
 ### Google Mobile Speed Test: <https://testmysite.thinkwithgoogle.com/>
 
- ![alt text](./docs/performance/performance-google-mobile.png "results")
+ ![alt text](./front-end/docs/performance/performance-google-mobile.png "results")
 
 ### Google Page Speed Insights: <https://developers.google.com/speed/pagespeed/insights/>
 
- ![alt text](./docs/performance/performance-google-insights.png "results")
+ ![alt text](./front-end/docs/performance/performance-google-insights.png "results")
