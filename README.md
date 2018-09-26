@@ -1,5 +1,19 @@
 # Sylvia F. Costa Insurance Agency Website XHTML
 
+### Design
+
+* Skecth App
+
+### Front-end 
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Back-end
+
+* WordPress
+
 ## Prototypes
 
 * Desktop: <https://marvelapp.com/6b0c59b/screen/34321565>
