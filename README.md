@@ -39,3 +39,4 @@
 ### Google Page Speed Insights: <https://developers.google.com/speed/pagespeed/insights/>
 
  ![alt text](./docs/performance/performance-google-insights.png "results")
+ 
