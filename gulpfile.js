@@ -97,8 +97,8 @@ exports.frontendWatch = frontendWatch
 const frontendDeploy = gulp.series(() => del(paths.frontend.dist), styles, images, scripts, html)
 
 // Commands
-gulp.task('frontend-deploy', frontendDeploy)
-gulp.task('frontend-start', frontendServer)
+gulp.task('deploy:front', frontendDeploy)
+gulp.task('serve:front', frontendServer)
 
 
 // ===================================================
