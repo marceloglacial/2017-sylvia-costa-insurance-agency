@@ -1,0 +1,33 @@
+{
+    "name": "2017-sylvia-costa-insurance-agency",
+    "version": "1.01",
+    "description": "Created by Marcelo Glacial Freitas",
+    "main": "gulpfile.js",
+    "directories": {
+      "doc": "docs"
+    },
+    "dependencies": {
+      "gulp-zip": "latest",
+      "browser-sync": "latest",
+      "del": "latest",
+      "gulp": "^4.0.0",
+      "gulp-autoprefixer": "latest",
+      "gulp-decompress": "latest",
+      "gulp-download": "latest",
+      "gulp-htmlmin": "latest",
+      "gulp-imagemin": "latest",
+      "gulp-sass": "latest",
+      "gulp-sourcemaps": "latest",
+      "gulp-uglify": "latest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://gitlab.com/glacial/2017-sylvia-costa-insurance-agency.git"
+    },
+    "author": "Marcelo Glacial Freitas",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://gitlab.com/glacial/2017-sylvia-costa-insurance-agency/issues"
+    },
+    "homepage": "https://gitlab.com/glacial/2017-sylvia-costa-insurance-agency"
+  }
