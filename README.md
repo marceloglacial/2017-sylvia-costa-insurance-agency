@@ -14,13 +14,13 @@
 
 * WordPress
 
-## Prototypes
+<!-- ## Prototypes
 
 * Desktop: <https://marvelapp.com/6b0c59b/screen/34321565>
 
 * iPad: <https://marvelapp.com/71fg9be/screen/34521228>
 
-* iPhone: <https://marvelapp.com/4519i65/screen/34521238>
+* iPhone: <https://marvelapp.com/4519i65/screen/34521238> -->
 
 ## Live Demo
 

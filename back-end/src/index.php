@@ -208,7 +208,7 @@
     <!-- /wrapper -->
 
     <!-- SCRIPTS -->
-    <script async src="<?php bloginfo('template_url'); ?>/vendor/js/jquery.min.js"></script>
+    <script async src="<?php bloginfo('template_url'); ?>/vendor/js/jquery-3.3.1.min.js"></script>
     <script async src="<?php bloginfo('template_url'); ?>/vendor/js/bootstrap.min.js"></script>
     <script async src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script>
     <?php wp_footer(); ?>
