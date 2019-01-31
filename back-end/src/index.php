@@ -41,26 +41,23 @@
 
     <!-- STYLES -->
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/vendor/css/animate.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/main.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/styles.css">
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700" rel="stylesheet">
 
     <?php wp_head(); ?> 
 </head>
 
 <body>
     <div id="wrapper" class="container-fluid">
-        <header id="top" class="row wow fadeIn">
+        <header id="top" class="row">
             <div id="logo" class="col-xs-10 col-md-8">
                 <h1><?php bloginfo('name'); ?></h1>
             </div>
             <!-- /logo -->
-            <div id="services" class="col-xs-12 col-md-6">
+            <div id="services" class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
                 <?php
                     if (is_home()) {
                         wp_nav_menu(array(
@@ -78,7 +75,7 @@
         <main>
             <section id="about-us">
                 <div id="moto" class="row">
-                    <article class="col-xs-10 col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                    <article class="col-xs-10 col-md-8">
                         <?php
                             // query for the about page
                             $your_query = new WP_Query( 'pagename=about-us' );
@@ -109,15 +106,13 @@
                     ?>
 
                     <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-                    <div class="col-md-6">
-                        <figure class="row wow fadeInUp" data-wow-delay="0.3s">
-                            <?php if ( has_post_thumbnail() ) { the_post_thumbnail('page-thumb'); } else {?><img src="<?php bloginfo('template_url'); ?>/assets/img/card-photo.png" alt="Card Photo" class="img-responsive col-xs-12 col-sm-6"><?php } ?>
-                            <figcaption class="col-xs-12 col-sm-6">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php the_content(); ?></p>
-                            </figcaption>
-                        </figure>
-                    </div>
+                    <figure class="col-lg-6">
+                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail('page-thumb'); } else {?><img src="<?php bloginfo('template_url'); ?>/assets/img/card-photo.png" alt="Card Photo" class="img-responsive"><?php } ?>
+                        <figcaption>
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php the_content(); ?></p>
+                        </figcaption>
+                    </figure>
 
                     <?php endwhile; ?>
 
@@ -129,7 +124,7 @@
             </section>
             <!-- /about-us -->
             <section id="contact-us">
-                <div id="form" class=" row wow fadeIn" data-wow-delay="0.5s">
+                <div id="form" class="row">
                     <?php
                             // query for the about page
                             $your_query = new WP_Query( 'pagename=contact-us' );
@@ -215,7 +210,6 @@
     <!-- SCRIPTS -->
     <script async src="<?php bloginfo('template_url'); ?>/vendor/js/jquery.min.js"></script>
     <script async src="<?php bloginfo('template_url'); ?>/vendor/js/bootstrap.min.js"></script>
-    <script async src="<?php bloginfo('template_url'); ?>/vendor/js/wow.min.js"></script>
     <script async src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script>
     <?php wp_footer(); ?>
 </body>
