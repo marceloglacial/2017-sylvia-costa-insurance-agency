@@ -15,7 +15,7 @@
     "gulp-imagemin": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
-    "gulp-uglify": "latest",
+    "gulp-uglify": "latest"
   },
   "repository": {
     "type": "git",
