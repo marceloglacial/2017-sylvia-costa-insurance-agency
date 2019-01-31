@@ -1,7 +1,7 @@
 deploy:
   script:
     - apt-get update -qq && apt-get install -y -qq lftp
-    - lftp -c "set ftps:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnev ./back-end/src/ ./home/sfco41592816662/html/wp-content/themes/sylvia-f-costa --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+    - lftp -c "set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnev ./back-end/src/ ./home/sfco41592816662/html/wp-content/themes/sylvia-f-costa --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
   only:
     - master
 
