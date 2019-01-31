@@ -64,7 +64,7 @@
                             'menu'             => 'Services',
                             'container_id'     => 'navbar-services',
                             'menu_class'       => 'nav',
-                            'before'           => '<span class="wow fadeIn"  data-wow-delay="0.4s">',
+                            'before'           => '<span>',
                             'after'            => '</span>'
                         ));
                     };

@@ -1,7 +1,5 @@
 const gulp = require('gulp');
 const del = require('del');
-const download = require('gulp-download');
-const decompress = require('gulp-decompress');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -9,8 +7,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
-const zip = require('gulp-zip');
-const rename = require('gulp-rename');
 
 // Paths
 const frontend = new function() {
@@ -23,22 +19,6 @@ const frontend = new function() {
     this.js = this.root + this.src + '/assets/js/**/*.js';
     this.images = this.root + this.src + '/assets/img/**/*.*';
 }
-const backend = new function() {
-    this.url = 'https://wordpress.org';
-    this.version = 'latest.zip';
-    this.proxy = 'http://localhost:8888';
-    this.root = './back-end';
-    this.src = this.root + '/src/';
-    this.dist = this.root + '/dist/';
-    this.server = this.root + '/server/';
-    this.tmp = this.root + '/tmp/';
-    this.themeName = 'sylvia-costa-insurance-agency';
-    this.themeFolder = this.server + '/wp-content/themes/' + this.themeName;
-}
-
-// ===================================================
-// Front-end
-// ===================================================
 
 // Minify CSS with SASS
 function styles() {
@@ -115,104 +95,6 @@ exports.frontendWatch = frontendWatch
 const frontendDeploy = gulp.series(() => del(frontend.dist), styles, images, scripts, html)
 
 // Commands
-gulp.task('frontend-deploy', frontendDeploy)
-gulp.task('frontend-build', frontendDeploy)
-gulp.task('frontend-start', frontendServer)
-
-//
-// ===================================================
-// Back-end
-// ===================================================
-//
-// Fisrt steps:
-// * Start PHP and MySQL servers 
-// * Create a WordPress database
-//
-
-// Download Wordpress
-function wpDownload() {
-    return (
-        download(backend.url + '/' + backend.version)
-        .pipe(gulp.dest(backend.tmp))
-    )
-}
-exports.wpDownload = wpDownload
-
-// Decompress Wordpress and add to server folder
-function wpUnzip() {
-    return (
-        gulp
-            .src(backend.tmp + '/*.{tar,tar.bz2,tar.gz,zip}')
-            .pipe(decompress({ strip: 1 }))
-            .pipe(gulp.dest(backend.server))
-    )
-}
-exports.wpUnzip = wpUnzip
-
-// Copy file from work folder to server folder
-function wpCopy() {
-    return (
-        gulp
-            .src(frontend.src + '/**/*.*')
-            .pipe(gulp.dest(backend.src))
-            .pipe(gulp.src(backend.src))
-            .pipe(gulp.dest(backend.themeFolder))
-    )
-}
-exports.wpCopy = wpCopy
-
-// Delete WordPress files
-function wpClean() {
-    return (
-        del([backend.tmp, backend.server])
-    )
-}
-exports.wpClean = wpClean
-
-// BrowserSync with new file
-function wpLive() {
-    return (
-        gulp
-            .src(backend.src)
-            .pipe(gulp.dest(backend.server + '/wp-content/themes/' + backend.themeName))
-            .pipe(browserSync.stream())
-    )
-}
-exports.wpLive = wpLive
-
-// Start server
-function wpStart() {
-    browserSync.init({
-        proxy: backend.proxy + '/' + backend.themeName + '/' + backend.server
-    });
-    wpWatch()
-}
-exports.wpStart = wpStart
-
-// Watch
-function wpWatch() {
-    gulp.watch(backend.src).on('change', wpLive);
-}
-exports.wpWatch = wpWatch
-
-
-// Deploy
-function zipfiles() {
-    return (
-        gulp
-            .src(paths.project.dist + '/**/*')
-            .pipe(zip(backend.themeName + '.zip'))
-            .pipe(gulp.dest(paths.project.deploy))
-    )
-}
-exports.zipfiles = zipfiles
-
-// Commands 
-const install = gulp.series(wpClean, wpDownload, wpUnzip, wpCopy, () => del(backend.tmp))
-// const build = gulp.series(() => del(paths.project.dist), styles, scripts, copy, images, html)
-// const deploy = gulp.series(() => del(paths.project.dist), build, zipfiles)
-
-gulp.task('backend-install', install)
-gulp.task('backend-start', wpStart)
-// gulp.task('backend-build', build)
-// gulp.task('backend-deploy', deploy)
+gulp.task('deploy', frontendDeploy)
+gulp.task('build', frontendDeploy)
+gulp.task('serve', frontendServer)
