@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: $main-font;
-    color: $light-grey;
+    color: $semi-grey;
 }
 
 h1,
@@ -22,25 +22,28 @@ h5,
 h6 {
     font-family: $secondary-font;
     text-overflow: ellipsis;
+    color: $black;
 }
 
 // Hero 
 // =======================================================
 
 header {
-    background: url("../img/hero-bg.png") no-repeat center top #F2F2F2;
+    background: url("../img/hero-bg.png") no-repeat bottom center;
     background-size: cover;
-    height: 650px;
+    background-color: $light-white;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
 
     #logo {
         background: url("../img/logo-white.png") no-repeat top center;
         background-size: contain;
         height: 200px;
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -35%);
+        margin-bottom: 100px;
 
         h1,
         p {
@@ -50,9 +53,7 @@ header {
 
     #services {
         position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, -0%);
+        bottom: 0;
 
         ul {
             list-style: none;
@@ -68,7 +69,6 @@ header {
                 padding: 90px 0 30px 0;
 
                 a {
-                    color: $light-grey;
                     text-decoration: none;
 
                     &:hover {
@@ -102,55 +102,54 @@ header {
     #moto {
         background: url("../img/about-us-bg.png") no-repeat center bottom;
         background-size: cover;
-        height: 600px;
+        min-height: 600px;
         position: relative;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    article {
-        text-align: center;
-        font-weight: 100;
-        font-size: 120%;
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -35%);
-    }
+        article {
+            padding: 100px 0 200px 0;
+            text-align: center;
 
-    h2 {
-        font-weight: 700;
-        font-size: 400%;
-        letter-spacing: -4px;
+            p {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+                padding-bottom: 15px;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 400%;
+            letter-spacing: -4px;
+        }
     }
 
     #team {
-        margin: 150px auto;
+        margin: 150px auto 200px auto;
         width: 90%;
-
+        
         figure {
             position: relative;
-            min-height: 350px;
+            display: flex;
+            align-items: center;
+
+            img {
+                box-shadow: 0px 2px 20px $grey;
+                padding: 0;
+                max-width: 250px;
+            }
+
+            figcaption {
+                background: $white;
+                margin-left: 20px;
+            }
         }
 
-        div:last-child {
+        div:nth-child(even) {
             margin-top: 80px;
-            left: 50px;
-        }
-
-        img {
-            box-shadow: 0px 2px 20px $grey;
-            padding: 0;
-            max-width: 300px;
-        }
-
-        figcaption {
-            background: $white;
-            margin-top: 40px;
-            position: absolute;
-            height: 285px;
-            width: 50%;
-            margin-left: 43%;
-            overflow: hidden;
-            padding: 20px 0 0 40px
         }
 
         h3 {
@@ -160,9 +159,9 @@ header {
         }
 
         p {
-            font-weight: 200;
+            font-weight: 300;
             line-height: 2em;
-            color: $semi-grey;
+            font-size: 120%;
         }
     }
 }
@@ -207,8 +206,8 @@ header {
             border: none;
             border-radius: 0;
             padding: 30px;
-            font-weight: 200;
-            color: $semi-grey;
+            font-weight: 300;
+            color: $grey;
         }
 
         button {
@@ -248,8 +247,8 @@ header {
         padding: 40px 70px 30px 70px;
         margin: 0;
         text-align: center;
-        color: $almost-white;
-        font-weight: 200;
+        color: $semi-grey;
+        font-weight: 300;
     }
 
     strong {
@@ -261,7 +260,7 @@ header {
     }
 
     a {
-        color: $almost-white;
+        color: $semi-grey;
     }
 }
 

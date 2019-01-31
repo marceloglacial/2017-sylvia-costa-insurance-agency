@@ -99,15 +99,3 @@ const frontendDeploy = gulp.series(() => del(paths.frontend.dist), styles, image
 // Commands
 gulp.task('deploy:front', frontendDeploy)
 gulp.task('serve:front', frontendServer)
-
-
-// ===================================================
-// Global
-// ===================================================
-
-// Watch Files
-function watch() {
-    gulp.watch(paths.frontend.sass, styles)
-    gulp.watch(paths.frontend.all, live)
-}
-exports.watch = watch
