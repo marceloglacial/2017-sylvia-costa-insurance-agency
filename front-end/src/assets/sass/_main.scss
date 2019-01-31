@@ -89,10 +89,17 @@ header {
 
                 a {
                     text-decoration: none;
+                    color: $black;
 
                     &:hover {
-                        background: none;
+                        text-decoration: none;
+                        color: $black;
+                        cursor: default;
                     }
+                }
+                &:hover {
+                    color: $black;
+                    cursor: default;
                 }
             }
         }
