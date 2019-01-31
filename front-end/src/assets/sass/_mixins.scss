@@ -1,23 +1,13 @@
+// Screen size variables
+$xs: 425px;  // Tiny phones
+$sm: 576px;  // Small tablets and large smartphones (landscape view)
+$md: 770px;  // Small tablets (portrait view)
+$lg: 992px;  // Tablets and small desktops
+$xl: 1200px; // Large tablets and desktops
 
-// Responsive Breakpoints  - https://engageinteractive.co.uk/blog/top-10-scss-mixins
-$breakpoints: (
-    "phone":        400px,
-    "phone-wide":   480px,
-    "phablet":      560px,
-    "tablet-small": 640px,
-    "tablet":       768px,
-    "tablet-wide":  1024px,
-    "desktop":      1248px,
-    "desktop-wide": 1440px
-);
-@mixin mq($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
-    }
-}
+// Mixins
+@mixin xs { @media (max-width: #{$xs}) {@content;} } 
+@mixin sm { @media (max-width: #{$sm}) {@content;} } 
+@mixin md { @media (max-width: #{$md}) {@content;} } 
+@mixin lg { @media (max-width: #{$lg}) {@content;} } 
+@mixin xl { @media (min-width: #{$xl}) {@content;} } 
