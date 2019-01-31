@@ -1,0 +1,390 @@
+// Title: Sylvia F. Costa Website
+// Author: Marcelo Glacial
+// Author URL: http: //sfcostains.com
+// Starts on: 11/29/2017
+
+// Global  
+// =======================================================
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: $main-font;
+    color: $semi-grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $secondary-font;
+    text-overflow: ellipsis;
+    color: $black;
+}
+
+// Hero 
+// =======================================================
+
+header {
+    background: url("../img/hero-bg.png") no-repeat bottom center;
+    background-size: cover;
+    background-color: $light-white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+
+    @include md {
+        height: 60vh;
+    }
+
+    @include sm {
+        height: 40vh;
+    }
+
+    #logo {
+        background: url("../img/logo-white.png") no-repeat top center;
+        background-size: contain;
+        height: 200px;
+        margin-bottom: 100px;
+
+        @include sm {
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+
+        h1,
+        p {
+            display: none;
+        }
+    }
+
+    #services {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+
+        @include sm {
+            transform: translateY(30%);
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            background: $white;
+            margin: 0 auto;
+            padding: 0;
+            box-shadow: 0px 2px 70px $grey;
+            font-weight: 900;
+            font-size: 130%;
+
+            li {
+                text-align: center;
+                padding: 90px 0 30px 0;
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+        }
+
+        .auto {
+            background: url("../img/service-item-auto.png") no-repeat center 40px;
+            background-size: 45px;
+        }
+
+        .home {
+            background: url("../img/service-item-home.png") no-repeat center 40px;
+            background-size: 55px;
+        }
+
+        .business {
+            background: url("../img/service-item-business.png") no-repeat center 40px;
+            background-size: 65px;
+        }
+    }
+}
+
+// About Us 
+// =======================================================
+
+#about-us {
+    #moto {
+        background: url("../img/about-us-bg.png") no-repeat center bottom;
+        background-size: cover;
+        min-height: 600px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        article {
+            padding: 100px 0 200px 0;
+            text-align: center;
+
+            @include sm {
+                padding-top: 30px;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+                padding-bottom: 15px;
+
+                @include sm {
+                    font-size: 16px;
+                }
+            
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 400%;
+            letter-spacing: -4px;
+        }
+    }
+
+    #team {
+        margin: 150px auto 200px auto;
+        width: 90%;
+
+        @include sm {
+            margin: 0 auto 50px auto;
+            width: calc(100% - 20px);
+        }
+        
+        figure {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            @include sm {
+                flex-direction: column;
+            }
+
+            &:nth-child(even) {
+                margin-top: 80px;
+            }
+
+            img {
+                box-shadow: 0px 2px 20px $grey;
+                padding: 0;
+                max-width: 250px;
+            }
+
+            figcaption {
+                margin-left: 40px;
+                @include sm {
+                    max-width: 250px;
+                    margin: 30px 0 0 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 215%;
+            letter-spacing: -2px;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 2em;
+            font-size: 120%;
+
+            @include sm {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+// Contact Us
+// =======================================================
+
+#contact-us {
+    #form {
+        background: url("../img/contact-bg.png") no-repeat top right;
+        background-size: cover;
+        background-attachment: fixed;
+
+        form {
+            margin: 0 auto 120px auto;
+            width: 88%;
+
+            div {
+                clear: both;
+                padding: 0;
+                margin: 0 0 10px 0;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 420%;
+            letter-spacing: -4px;
+            color: $white;
+            width: 88%;
+            margin: 100px auto 0px auto;
+        }
+
+        label {
+            display: none;
+        }
+
+        input,
+        textarea,
+        button {
+            border: none;
+            border-radius: 0;
+            padding: 30px;
+            font-weight: 300;
+            color: $grey;
+
+            @include sm {
+                font-size: 16px;
+            }
+        }
+
+        button {
+            width: 50%;
+            color: $white;
+            background: $almost-white;
+            text-transform: lowercase;
+            padding: 20px;
+
+            &:hover {
+                background: $pure-grey;
+            }
+        }
+    }
+
+    #map {
+        h2 {
+            display: none;
+        }
+
+        iframe {
+            max-height: 100%;
+        }
+    }
+}
+
+
+#business-card {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    address {
+        position: absolute;
+        bottom: -74px;
+        background: $white;
+        padding: 40px 70px 30px 70px;
+        margin: 0;
+        text-align: center;
+        color: $semi-grey;
+        font-weight: 300;
+
+        @include sm {
+            padding: 50px 20px 30px 20px;
+        }
+        
+        @include md {
+            position: unset;
+            top: unset;
+        }
+    }
+
+    strong {
+        display: none;
+    }
+
+    p {
+        padding-top: 20px;
+    }
+
+    a {
+        color: $semi-grey;
+    }
+}
+
+
+// Footer
+// =======================================================
+
+footer {
+    font-family: $secondary-font;
+    background: $red;
+
+    .nav-pills {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul.nav {
+        margin-left: 50%;
+
+        @include md {
+            margin-left: 0;
+        }
+
+        li {
+            padding: 0;
+            float: left;
+            width: 33.33%;
+
+            a {
+                color: $white;
+                font-weight: 700;
+                text-transform: lowercase;
+                font-size: 120%;
+                margin: 0;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                border-radius: 0;
+                text-align: center;
+
+                &:hover {
+                    background: $light-red;
+                }
+            }
+        }
+    }
+}
+
+#dev {
+    background: $light-red;
+    margin: 0 auto;
+    padding: 20px 0;
+    
+    @include md {
+        text-align: center;
+    }
+
+    a {
+        width: 88%;
+        display: block;
+        margin: 0 auto;
+        font-size: 150%;
+        color: rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}

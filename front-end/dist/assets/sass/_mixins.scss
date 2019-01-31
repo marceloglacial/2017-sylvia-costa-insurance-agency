@@ -1,0 +1,13 @@
+// Screen size variables
+$xs: 425px;  // Tiny phones
+$sm: 576px;  // Small tablets and large smartphones (landscape view)
+$md: 770px;  // Small tablets (portrait view)
+$lg: 992px;  // Tablets and small desktops
+$xl: 1200px; // Large tablets and desktops
+
+// Mixins
+@mixin xs { @media (max-width: #{$xs}) {@content;} } 
+@mixin sm { @media (max-width: #{$sm}) {@content;} } 
+@mixin md { @media (max-width: #{$md}) {@content;} } 
+@mixin lg { @media (max-width: #{$lg}) {@content;} } 
+@mixin xl { @media (min-width: #{$xl}) {@content;} } 
