@@ -94,19 +94,13 @@
                 <!-- /moto -->
                 <div id="team" class="row">
                     <?php
-                    $pgname = get_page_by_title('Team');
-                    $args = array(
-                        'post_parent' => $pgname->ID,
-                        'post_type' => 'page',
-                        'order' => 'ASC',
-                        // 'orderby' => 'title'
-                    );
-
-                    $child_query = new WP_Query( $args );
+                        // query for the our mission page
+                        $your_query = new WP_Query( 'pagename=our-mission' );
+                        // "loop" through query (even though it's just one page)
+                        while ( $your_query->have_posts() ) : $your_query->the_post();
                     ?>
 
-                    <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-                    <figure class="col-lg-6">
+                    <figure class="col-lg-12">
                         <?php if ( has_post_thumbnail() ) { the_post_thumbnail('page-thumb'); } else {?><img src="<?php bloginfo('template_url'); ?>/assets/img/card-photo.png" alt="Card Photo" class="img-responsive"><?php } ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>

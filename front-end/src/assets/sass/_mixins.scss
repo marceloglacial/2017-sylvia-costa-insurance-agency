@@ -1,9 +1,9 @@
 // Screen size variables
-$xs: 425px;  // Tiny phones
-$sm: 576px;  // Small tablets and large smartphones (landscape view)
-$md: 770px;  // Small tablets (portrait view)
-$lg: 992px;  // Tablets and small desktops
-$xl: 1200px; // Large tablets and desktops
+$xs: 450px;   // iPhone 5
+$sm: 600px;   // iPhone 6 to X
+$md: 850px;   // iPad Portrait
+$lg: 1279px;  // iPad Landscape
+$xl: 1900px;  // (above) Large screens
 
 // Mixins
 @mixin xs { @media (max-width: #{$xs}) {@content;} } 
