@@ -40,7 +40,6 @@ function styles() {
         gulp
             .src(paths.frontend.sass)
             .pipe(sourcemaps.init())
-            .pipe(sass())
             .pipe(sass({outputStyle: 'compressed'}))
             .on('error', sass.logError)
             .pipe(autoprefixer({
