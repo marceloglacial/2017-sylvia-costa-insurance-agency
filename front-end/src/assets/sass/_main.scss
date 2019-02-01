@@ -36,7 +36,7 @@ h3 {
     letter-spacing: -2px;
     padding-bottom: 20px;
 
-    @include responsive($tablet) {
+    @include responsive($tablets-landscape) {
         font-size: 40px;
     }
 }
@@ -50,7 +50,7 @@ p {
     display: inline-block;
     margin: 0;
 
-    @include responsive($tablet) {
+    @include responsive($tablets-landscape) {
         font-size: 16px;
         line-height: 32px;
         padding-bottom: 32px;
@@ -66,8 +66,9 @@ header,
 section {
     min-height: 800px;
 
-    @include responsive($tablet-landscape) {
+    @include responsive($tablets-landscape) {
         min-height: unset;
+        height: unset;
     }
 
 }
@@ -91,11 +92,13 @@ header {
     flex-direction: column;
     height: 85vh;
 
-    @include responsive($tablet) {
-        min-height: unset;
+    @include responsive($tablets) {
         height: 45vh;
     }
 
+    @include responsive($phones) {
+        height: 35vh;
+    }
 
     #logo {
         background: url("../img/logo-white.png") no-repeat top center;
@@ -104,7 +107,7 @@ header {
         height: 250px;
         margin-bottom: 100px;
 
-        @include responsive($tablet) {
+        @include responsive($phones) {
             margin-bottom: 20px;
             height: 100px;
         }
@@ -121,7 +124,11 @@ header {
         z-index: 10;
         width: 600px;
 
-        @include responsive($tablet) {
+        @include responsive($tablets) {
+            width: 60%;
+        }
+
+        @include responsive($phones) {
             display: none;
         }
 
@@ -145,10 +152,19 @@ header {
                 justify-content: center;
                 position: relative;
 
+                @include responsive($tablets-landscape) {
+                    height: 140px;
+                }
+
                 a {
                     text-decoration: none;
                     color: $black;
                     padding-bottom: 30px;
+
+                    @include responsive($tablets-landscape) {
+                        font-size: 16px;
+                        padding-bottom: 25px;
+                    }
 
                     &:hover {
                         text-decoration: none;
@@ -204,7 +220,17 @@ header {
         width: 50%;
         text-align: justify;
 
-        @include responsive($tablet) {
+        @include responsive($tablets-landscape) {
+            width: 80%;
+            height: unset;
+            padding: 100px 0 200px 0;
+        }
+
+        @include responsive($tablets) {
+            padding: 50px 0 120px 0;
+        }
+
+        @include responsive($phones) {
             height: unset;
             padding: 30px 0 120px 0;
             width: calc(100% - 40px);
@@ -230,11 +256,27 @@ header {
         justify-content: center;
         height: 100vh;
 
-        @include responsive($tablet) {
+        @include responsive($tablets-landscape) {
+            height: unset;
+            padding: 150px 0;
+            p {
+                padding-bottom: 5px;
+            }
+        }
+
+        @include responsive($tablets) {
+            padding: 0 0 50px 0;
+            p {
+                padding-bottom: 5px;
+            }
+        }
+
+        @include responsive($phones) {
             text-align: center;
             width: calc(100% - 40px);
-            height: unset;
-            padding-bottom: 50px;
+            p {
+                padding-bottom: 25px;
+            }
         }
 
     }
@@ -254,15 +296,18 @@ header {
     align-items: center;
     flex-direction: column;
 
-    @include responsive($tablet) {
+    @include responsive($tablets) {
         height: unset;
+        padding: 50px 0;
+    }
+    @include responsive($phones) {
         padding: 20px 0;
     }
 
     #form {
         width: 80%;
 
-        @include responsive($tablet) {
+        @include responsive($phones) {
             width: calc(100% - 40px);
         }
 
@@ -288,7 +333,7 @@ header {
             font-size: 16px;
             outline: none;
 
-            @include responsive($tablet) {
+            @include responsive($tablets) {
                 width: calc(100% - 30px);
                 padding: 15px;
             }
@@ -301,7 +346,7 @@ header {
             padding: 20px;
             width: 50%;
 
-            @include responsive($tablet) {
+            @include responsive($tablets) {
                 width: 100%;
                 padding: 15px;
             }
@@ -351,7 +396,7 @@ header {
     height: 0;
     min-height: unset;
 
-    @include responsive($tablet) {
+    @include responsive($tablets) {
         max-width: unset;
         height: unset;
     }
@@ -364,7 +409,7 @@ header {
         padding: 40px 20px;
         text-align: center;
 
-        @include responsive($tablet) {
+        @include responsive($tablets) {
             position: unset;
             bottom: unset;
             width: calc(100% - 40px);
@@ -374,7 +419,7 @@ header {
             padding-bottom: 20px;
             max-width: 80%;
 
-            @include responsive($tablet) {
+            @include responsive($phones) {
                 max-width: calc(100% - 20px);
             }
         }
@@ -394,7 +439,7 @@ header {
             margin: 0;
             line-height: 1.5vw;
 
-            @include responsive($tablet) {
+            @include responsive($tablets-landscape) {
                 font-size: 13px;
                 line-height: 20px;
             }
@@ -421,7 +466,7 @@ footer {
         text-transform: lowercase;
         font-size: 1.1vw;
 
-        @include responsive($tablet) {
+        @include responsive($tablets-landscape) {
             font-size: 16px;
         }
     }
@@ -434,7 +479,7 @@ footer {
         padding: 0 0 0 50%;
         margin: 0;
 
-        @include responsive($tablet) {
+        @include responsive($tablets) {
             width: 100%;
             padding: 0;
         }
@@ -469,7 +514,7 @@ footer {
             width: 80%;
             opacity: .3;
 
-            @include responsive($tablet) {
+            @include responsive($tablets-landscape) {
                 font-size: 16px;
                 text-align: center;
                 opacity: .4;

@@ -2,9 +2,9 @@
 $small-phones: 350px;
 $phones: 450px;
 $phones-landscape: 820px;
-$tablet: 780px;
-$tablet-landscape: 1050px;
-$tablet-pro: 1400px;
+$tablets: 780px;
+$tablets-landscape: 1050px;
+$tablets-pro: 1400px;
 
 // Mixins
 @mixin responsive($size) {
