@@ -35,6 +35,10 @@ h3 {
     font-size: 4vw;
     letter-spacing: -2px;
     padding-bottom: 20px;
+
+    @include responsive($tablet) {
+        font-size: 40px;
+    }
 }
 
 p {
@@ -45,15 +49,29 @@ p {
     padding-bottom: 1.5vw;
     display: inline-block;
     margin: 0;
+
+    @include responsive($tablet) {
+        font-size: 16px;
+        line-height: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 img {
     width: 100%;
     height: auto;
 }
+
+header,
 section {
     min-height: 800px;
+
+    @include responsive($tablet-landscape) {
+        min-height: unset;
+    }
+
 }
+
 #wrapper {
     display: flex;
     flex-direction: column;
@@ -73,12 +91,23 @@ header {
     flex-direction: column;
     height: 85vh;
 
+    @include responsive($tablet) {
+        min-height: unset;
+        height: 45vh;
+    }
+
+
     #logo {
         background: url("../img/logo-white.png") no-repeat top center;
         background-size: contain;
         width: 90%;
         height: 250px;
         margin-bottom: 100px;
+
+        @include responsive($tablet) {
+            margin-bottom: 20px;
+            height: 100px;
+        }
 
         h1,
         p {
@@ -91,6 +120,11 @@ header {
         bottom: 0;
         z-index: 10;
         width: 600px;
+
+        @include responsive($tablet) {
+            display: none;
+        }
+
 
         ul {
             list-style: none;
@@ -170,6 +204,13 @@ header {
         width: 50%;
         text-align: justify;
 
+        @include responsive($tablet) {
+            height: unset;
+            padding: 30px 0 120px 0;
+            width: calc(100% - 40px);
+            text-align: center;
+        }
+
         h2,
         h3 {
             text-align: center;
@@ -188,6 +229,14 @@ header {
         flex-direction: column;
         justify-content: center;
         height: 100vh;
+
+        @include responsive($tablet) {
+            text-align: center;
+            width: calc(100% - 40px);
+            height: unset;
+            padding-bottom: 50px;
+        }
+
     }
 }
 
@@ -205,8 +254,17 @@ header {
     align-items: center;
     flex-direction: column;
 
+    @include responsive($tablet) {
+        height: unset;
+        padding: 20px 0;
+    }
+
     #form {
         width: 80%;
+
+        @include responsive($tablet) {
+            width: calc(100% - 40px);
+        }
 
         h2 {
             margin-top: 0;
@@ -228,6 +286,12 @@ header {
             font-weight: 300;
             color: $grey;
             font-size: 16px;
+            outline: none;
+
+            @include responsive($tablet) {
+                width: calc(100% - 30px);
+                padding: 15px;
+            }
         }
 
         button {
@@ -236,6 +300,12 @@ header {
             text-transform: lowercase;
             padding: 20px;
             width: 50%;
+
+            @include responsive($tablet) {
+                width: 100%;
+                padding: 15px;
+            }
+
 
             &:hover {
                 background: $pure-grey;
@@ -263,6 +333,7 @@ header {
         margin: 0;
         padding: 0;
     }
+
     &.off {
         iframe {
             pointer-events: none;
@@ -280,6 +351,11 @@ header {
     height: 0;
     min-height: unset;
 
+    @include responsive($tablet) {
+        max-width: unset;
+        height: unset;
+    }
+
     address {
         position: absolute;
         bottom: -80px;
@@ -288,9 +364,19 @@ header {
         padding: 40px 20px;
         text-align: center;
 
+        @include responsive($tablet) {
+            position: unset;
+            bottom: unset;
+            width: calc(100% - 40px);
+        }
+
         img {
             padding-bottom: 20px;
             max-width: 80%;
+
+            @include responsive($tablet) {
+                max-width: calc(100% - 20px);
+            }
         }
 
         strong {
@@ -307,7 +393,13 @@ header {
             padding: 0;
             margin: 0;
             line-height: 1.5vw;
+
+            @include responsive($tablet) {
+                font-size: 13px;
+                line-height: 20px;
+            }
         }
+
         a:hover {
             text-decoration: underline;
         }
@@ -321,13 +413,19 @@ header {
 
 footer {
     background: $light-red;
+
     a {
         color: $white;
         font-family: $secondary-font;
         text-decoration: none;
         text-transform: lowercase;
         font-size: 1.1vw;
+
+        @include responsive($tablet) {
+            font-size: 16px;
+        }
     }
+
     ul {
         display: flex;
         list-style: none;
@@ -336,8 +434,14 @@ footer {
         padding: 0 0 0 50%;
         margin: 0;
 
+        @include responsive($tablet) {
+            width: 100%;
+            padding: 0;
+        }
+
         li {
             width: 33.33%;
+
             a {
                 display: flex;
                 justify-content: center;
@@ -351,6 +455,7 @@ footer {
             }
         }
     }
+
     #dev {
         display: flex;
         align-items: center;
@@ -363,6 +468,12 @@ footer {
             font-size: 1.5vw;
             width: 80%;
             opacity: .3;
+
+            @include responsive($tablet) {
+                font-size: 16px;
+                text-align: center;
+                opacity: .4;
+            }
 
             &:hover {
                 opacity: 1;

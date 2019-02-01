@@ -1,13 +1,14 @@
 // Screen size variables
-$xs: 450px;   // iPhone 5
-$sm: 600px;   // iPhone 6 to X
-$md: 850px;   // iPad Portrait
-$lg: 1279px;  // iPad Landscape
-$xl: 1900px;  // (above) Large screens
+$small-phones: 350px;
+$phones: 450px;
+$phones-landscape: 820px;
+$tablet: 780px;
+$tablet-landscape: 1050px;
+$tablet-pro: 1400px;
 
 // Mixins
-@mixin xs { @media (max-width: #{$xs}) {@content;} } 
-@mixin sm { @media (max-width: #{$sm}) {@content;} } 
-@mixin md { @media (max-width: #{$md}) {@content;} } 
-@mixin lg { @media (max-width: #{$lg}) {@content;} } 
-@mixin xl { @media (min-width: #{$xl}) {@content;} } 
+@mixin responsive($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
