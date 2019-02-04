@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#map").addClass("off"),$("#map").click(function(){$(this).removeClass("off")}).mouseleave(function(){$(this).addClass("off")}),$('a[href*="#"]').on("click",function(e){e.preventDefault(),$("html, body").animate({scrollTop:$($(this).attr("href")).offset().top},600)}),$("#services ul li a").click(function(e){e.preventDefault()})});
