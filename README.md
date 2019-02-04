@@ -1,4 +1,4 @@
-# Sylvia F. Costa Insurance Agency Website XHTML
+# Sylvia F. Costa Insurance Agency Website
 
 ## Design
 
@@ -21,5 +21,18 @@ https://glacial.gitlab.io/2017-sylvia-costa-insurance-agency/
 
 ## Screenshot
 
+<div style="text-align: center; width= 100%">
 
-![screenshot](docs/screenshots/desktop.png) ![screenshot](docs/screenshots/tablet.png) ![screenshot](docs/screenshots/mobile.png)
+### Desktop
+![Desktop](docs/screenshots/desktop.png) 
+
+---
+
+### Tablet
+![Tablet](docs/screenshots/tablet.png) 
+
+---
+
+### Mobile
+![Mobile](docs/screenshots/mobile.png)
+</div>
