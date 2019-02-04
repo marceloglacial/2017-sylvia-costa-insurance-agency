@@ -1,4 +1,4 @@
-# Sylvia F. Costa Insurance Agency Website XHTML
+# Sylvia F. Costa Insurance Agency Website
 
 ## Design
 
@@ -9,18 +9,11 @@
 * HTML5
 * CSS3
 * JavaScript
+* jQuery
 
 ## Back-end
 
 * WordPress
-
-<!-- ## Prototypes
-
-* Desktop: <https://marvelapp.com/6b0c59b/screen/34321565>
-
-* iPad: <https://marvelapp.com/71fg9be/screen/34521228>
-
-* iPhone: <https://marvelapp.com/4519i65/screen/34521238> -->
 
 ## Live Demo
 
@@ -28,19 +21,18 @@ https://glacial.gitlab.io/2017-sylvia-costa-insurance-agency/
 
 ## Screenshot
 
-![screenshot](design/dist/01-LargeDeviceDesktops.png)
+<div style="display: flex; width:100%; justify-content: center;">
 
-## Performance Tests
+### Desktop
+![Desktop](docs/screenshots/desktop.png) 
 
-### HTML5 Validator: <https://validator.w3.org>
+---
 
- ![alt text](./docs/performance/performance-html5-validador.png "results")
+### Tablet
+![Tablet](docs/screenshots/tablet.png) 
 
-### Google Mobile Speed Test: <https://testmysite.thinkwithgoogle.com/>
+---
 
- ![alt text](./docs/performance/performance-google-mobile.png "results")
-
-### Google Page Speed Insights: <https://developers.google.com/speed/pagespeed/insights/>
-
- ![alt text](./docs/performance/performance-google-insights.png "results")
- 
+### Mobile
+![Mobile](docs/screenshots/mobile.png)
+</div>
