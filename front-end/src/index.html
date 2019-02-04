@@ -39,8 +39,7 @@
     <meta property="og:locale" content="en_US">
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.1">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
@@ -48,125 +47,109 @@
 </head>
 
 <body>
-    <div id="wrapper" class="container-fluid">
-        <header id="top" class="row">
-            <div id="logo" class="col-xs-10 col-md-8">
+    <div id="wrapper">
+        <header id="top">
+            <div id="logo">
                 <h1>Sylvia F. Costa</h1>
                 <p>Insurance Agency</p>
             </div>
             <!-- /logo -->
-            <div id="services" class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
-                <ul class="row">
-                    <li class="auto col-xs-4"><a href="#">Auto</a></li>
-                    <li class="business col-xs-4"><a href="#">Business</a></li>
-                    <li class="home col-xs-4"><a href="#">Home</a> </li>
+            <div id="services">
+                <ul>
+                    <li class="auto"><a href="#">Auto</a></li>
+                    <li class="business"><a href="#">Business</a></li>
+                    <li class="home"><a href="#">Home</a> </li>
                 </ul>
             </div>
             <!-- /services -->
         </header>
         <main>
             <section id="about-us">
-                <div id="moto" class="row">
-                    <article class="col-xs-10 col-md-8">
-                        <h2>About Us</h2>
-                        <p>Welcome and thank you for visiting our Website. We would like to take a minute of your time
-                            and explain who we are and what we are all about. Sylvia F. Costa Ins Agency is a family
-                            owned and operated Independent Insurance Agency; offering automobile, homeowners and
-                            business insurance. The agency has been owned and operated by Sylvia and Fernando Costa
-                            since 2000.</p>
-                        <p>As an independent insurance agency, we are not obligated to any one company and represent
-                            only top financially sound companies. By working with a variety of insurance providers, we
-                            can select a company according to your individual needs and not the needs of a single
-                            company.</p>
-                        <p>Our partnership with solid and reputable insurers, we promise you the correct policy for you
-                            and your business.</p>
-                        <p>To make sure all our customers needs are understood all our staff speaks English, Portuguese
-                            and Spanish. We are focused on maintaining relationships with our clients.</p>
-                    </article>
-                </div>
-                <!-- /moto -->
-                <div id="team" class="row">
-                    <figure class="col-lg-6">
-                        <img src="assets/img/card-photo.png" alt="Card Photo" class="img-responsive">
-                        <figcaption>
-                            <h3>Trust</h3>
-                            <p>We are focused on maintaining relationships with our clients. We love what we do,
-                                and look forward helping your family or business with all your insurance needs.
-                                Your satisfaction is our ultimate goal.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="col-lg-6">
-                        <img src="assets/img/card-photo.png" alt="Card Photo" class="img-responsive">
-                        <figcaption>
-                            <h3>Communication</h3>
-                            <p>To make sure all our customers needs are understood all our staff speaks English,
-                                Portuguese and Spanish
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /team -->
+                <article>
+                    <h2>About Us</h2>
+                    <p>Welcome and thank you for visiting our Website. We would like to take a minute of your time
+                        and explain who we are and what we are all about. <strong>Sylvia F. Costa Ins Agency</strong>
+                        is a family
+                        owned and operated Independent Insurance Agency; offering automobile, homeowners and
+                        business insurance. The agency has been owned and operated by <strong>Sylvia</strong> and
+                        <strong>Fernando Costa</strong>
+                        since 2000.</p>
+                    <p>As an independent insurance agency, we are not obligated to any one company and represent
+                        only top financially sound companies. By working with a variety of insurance providers, we
+                        can select a company according to your individual needs and not the needs of a single
+                        company.</p>
+                    <p>Our partnership with solid and reputable insurers, we promise you the correct policy for you
+                        and your business.</p>
+                </article>
             </section>
-            <!-- /about-us -->
+
+            <section id="mission">
+                <article>
+                    <h3>Our Mission</h3>
+                    <p>We are focused on maintaining <strong>relationships</strong> with our clients.</p>
+                    <p><strong>We love what we do</strong>, and look forward helping your family or business with all
+                        your insurance needs.</p>
+                    <p>To make sure all our customers needs are understood all our staff speaks <strong>English,
+                            Portuguese and Spanish.</strong></p>
+                    <p><strong>Your satisfaction</strong> is our ultimate goal.</p>
+                </article>
+            </section>
+
             <section id="contact-us">
-                <div id="form" class="row">
+                <div id="form">
                     <form action="#">
-                        <div class="form-group col-md-6">
+                        <div class="form-group">
                             <h2>Contact Us</h2>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group">
                             <input type="text" class="form-control" id="contactName" placeholder="Your Full Name">
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group">
                             <input type="email" class="form-control" id="contactEmail" placeholder="Your E-mail">
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group">
                             <textarea class="form-control" rows="5" id="contactText" placeholder="How can we help you?"></textarea>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group">
                             <button type="submit" class="btn btn-primary">Send</button>
                         </div>
                         <span class="clearfix"></span>
                     </form>
                 </div>
-                <!-- /form -->
-                <div id="map" class="row">
-                    <h2>Visit Us</h2>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.0280713546335!2d-71.01960858470595!3d42.0854480792063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e484dbac060afd%3A0xb50098d9bc8694e4!2s15+Montello+St%2C+Brockton%2C+MA+02301%2C+USA!5e0!3m2!1sen!2sca!4v1511995113026"></iframe>
-                    </div>
-                </div>
-                <!-- /map -->
-                <div id="business-card" itemscope itemtype="http://schema.org/LocalBusiness" class="row">
-                    <address class="col-md-6">
-                        <img itemprop="image" src="assets/img/logo-dark.png" alt="Company Logo" class="img-responsive">
-                        <strong itemprop="name">Sylvia F. Costa Insurance Agency</strong>
-                        <p>
-                            <span itemprop="address">15 Montello Street / Brockton / MA 02301</span>
-                            <br />
-                            <span itemprop="telephone">
-                                <a href="tel:+15085830022">Tel: +1(508) 583.0022</a>
-                            </span> /
-                            <a href="tel:+15085837744">Fax: +1(508) 583.7744</a>
-                            <br />
-                            <a href="mailto:sfcostaIns@hotmail.com">sfcostaIns@hotmail.com</a>
-                        </p>
-                    </address>
-                </div>
-                <!-- /business-card -->
             </section>
-            <!-- contact-us -->
+
+            <section id="map" class="off">
+                <h2>Visit Us</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.0280713546335!2d-71.01960858470595!3d42.0854480792063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e484dbac060afd%3A0xb50098d9bc8694e4!2s15+Montello+St%2C+Brockton%2C+MA+02301%2C+USA!5e0!3m2!1sen!2sca!4v1511995113026"></iframe>
+            </section>
+
+            <section id="business-card" itemscope itemtype="http://schema.org/LocalBusiness">
+                <address>
+                    <img itemprop="image" src="assets/img/logo-dark.png" alt="Company Logo">
+                    <strong itemprop="name">Sylvia F. Costa Insurance Agency</strong>
+                    <p>
+                        <span itemprop="address">15 Montello Street / Brockton / MA 02301</span>
+                        <br />
+                        <span itemprop="telephone">
+                            <a href="tel:+15085830022">Tel: +1(508) 583.0022</a>
+                        </span> /
+                        <a href="tel:+15085837744">Fax: +1(508) 583.7744</a>
+                        <br />
+                        <a href="mailto:sfcostaIns@hotmail.com">sfcostaIns@hotmail.com</a>
+                    </p>
+                </address>
+            </section>
         </main>
-        <footer class="row">
+        <footer>
             <nav>
                 <ul class="nav">
-                    <li role="presentation" class="col-xs-4">
+                    <li role="presentation">
                         <a href="#top">Services</a>
                     </li>
-                    <li role="presentation" class="col-xs-4">
+                    <li role="presentation">
                         <a href="#about-us">About Us</a>
                     </li>
-                    <li role="presentation" class="col-xs-4">
+                    <li role="presentation">
                         <a href="#contact-us">Contact Us</a>
                     </li>
                 </ul>
@@ -180,7 +163,6 @@
 
     <!-- SCRIPTS -->
     <script async src="./vendor/js/jquery-3.3.1.min.js"></script>
-    <script async src="./vendor/js/bootstrap.min.js"></script>
     <script async src="./assets/js/main.js"></script>
 </body>
 
