@@ -21,7 +21,7 @@ https://glacial.gitlab.io/2017-sylvia-costa-insurance-agency/
 
 ## Screenshot
 
-<div style="text-align: center; width= 100%">
+<div style="display: flex; width:100%; justify-content: center;">
 
 ### Desktop
 ![Desktop](docs/screenshots/desktop.png) 
