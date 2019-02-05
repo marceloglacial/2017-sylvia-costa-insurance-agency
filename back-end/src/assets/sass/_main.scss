@@ -12,6 +12,8 @@ body {
     height: 100%;
     font-family: $main-font;
     color: $semi-grey;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -23,6 +25,57 @@ h6 {
     font-family: $secondary-font;
     text-overflow: ellipsis;
     color: $black;
+    margin: 0;
+    padding-bottom: 2vw;
+}
+
+h2,
+h3 {
+    font-weight: 700;
+    font-size: 4vw;
+    letter-spacing: -2px;
+    padding-bottom: 20px;
+
+    @include responsive($tablets-landscape) {
+        font-size: 40px;
+    }
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.2vw;
+    color: $grey;
+    line-height: 2.1vw;
+    padding-bottom: 1.5vw;
+    display: inline-block;
+    margin: 0;
+
+    @include responsive($tablets-landscape) {
+        font-size: 16px;
+        line-height: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header,
+section {
+    min-height: 800px;
+
+    @include responsive($tablets-landscape) {
+        min-height: unset;
+        height: unset;
+    }
+
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 // Hero 
@@ -37,25 +90,26 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: 85vh;
 
-    @include md {
-        height: 60vh;
+    @include responsive($tablets) {
+        height: 45vh;
     }
 
-    @include sm {
-        height: 40vh;
+    @include responsive($phones) {
+        height: 35vh;
     }
 
     #logo {
         background: url("../img/logo-white.png") no-repeat top center;
         background-size: contain;
-        height: 200px;
+        width: 90%;
+        height: 250px;
         margin-bottom: 100px;
 
-        @include sm {
-            margin-top: 50px;
-            margin-bottom: 0;
+        @include responsive($phones) {
+            margin-bottom: 20px;
+            height: 100px;
         }
 
         h1,
@@ -68,11 +122,16 @@ header {
         position: absolute;
         bottom: 0;
         z-index: 10;
+        width: 600px;
 
-        @include sm {
-            transform: translateY(30%);
+        @include responsive($tablets) {
+            width: 60%;
+        }
+
+        @include responsive($phones) {
             display: none;
         }
+
 
         ul {
             list-style: none;
@@ -82,14 +141,30 @@ header {
             box-shadow: 0px 2px 70px $grey;
             font-weight: 900;
             font-size: 130%;
+            display: flex;
 
             li {
                 text-align: center;
-                padding: 90px 0 30px 0;
+                height: 150px;
+                width: 33.33%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                position: relative;
+
+                @include responsive($tablets-landscape) {
+                    height: 140px;
+                }
 
                 a {
                     text-decoration: none;
                     color: $black;
+                    padding-bottom: 30px;
+
+                    @include responsive($tablets-landscape) {
+                        font-size: 16px;
+                        padding-bottom: 25px;
+                    }
 
                     &:hover {
                         text-decoration: none;
@@ -97,26 +172,34 @@ header {
                         cursor: default;
                     }
                 }
-                &:hover {
-                    color: $black;
-                    cursor: default;
+
+                &.auto {
+                    background: url("../img/service-item-auto.png") no-repeat center 40px;
+                    background-size: 45px;
+                }
+
+                &.home {
+                    background: url("../img/service-item-home.png") no-repeat center 40px;
+                    background-size: 55px;
+                }
+
+                &.business {
+                    background: url("../img/service-item-business.png") no-repeat center 40px;
+                    background-size: 65px;
+                }
+
+                &:not(:last-child):after {
+                    display: block;
+                    content: '';
+                    background: $light-white;
+                    width: 3px;
+                    height: 60px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
             }
-        }
-
-        .auto {
-            background: url("../img/service-item-auto.png") no-repeat center 40px;
-            background-size: 45px;
-        }
-
-        .home {
-            background: url("../img/service-item-home.png") no-repeat center 40px;
-            background-size: 55px;
-        }
-
-        .business {
-            background: url("../img/service-item-business.png") no-repeat center 40px;
-            background-size: 65px;
         }
     }
 }
@@ -125,96 +208,77 @@ header {
 // =======================================================
 
 #about-us {
-    #moto {
-        background: url("../img/about-us-bg.png") no-repeat center bottom;
-        background-size: cover;
-        min-height: 600px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    background: url("../img/about-us-bg.png") no-repeat center bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        article {
+    article {
+        height: 85vh;
+        padding: 15vh 0 0 0;
+        width: 50%;
+        text-align: justify;
+
+        @include responsive($tablets-landscape) {
+            width: 80%;
+            height: unset;
             padding: 100px 0 200px 0;
-            text-align: center;
-
-            @include sm {
-                padding-top: 30px;
-            }
-
-            p {
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 30px;
-                padding-bottom: 15px;
-
-                @include sm {
-                    font-size: 16px;
-                }
-            
-            }
         }
 
-        h2 {
-            font-weight: 700;
-            font-size: 400%;
-            letter-spacing: -4px;
+        @include responsive($tablets) {
+            padding: 50px 0 120px 0;
+        }
+
+        @include responsive($phones) {
+            height: unset;
+            padding: 30px 0 120px 0;
+            width: calc(100% - 40px);
+            text-align: center;
+        }
+
+        h2,
+        h3 {
+            text-align: center;
         }
     }
+}
 
-    #team {
-        margin: 150px auto 200px auto;
-        width: 90%;
+// Our Mission
+// =======================================================
 
-        @include sm {
-            margin: 0 auto 50px auto;
-            width: calc(100% - 20px);
-        }
-        
-        figure {
-            position: relative;
-            display: flex;
-            align-items: center;
+#mission {
+    article {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
 
-            @include sm {
-                flex-direction: column;
-            }
-
-            &:nth-child(even) {
-                margin-top: 80px;
-            }
-
-            img {
-                box-shadow: 0px 2px 20px $grey;
-                padding: 0;
-                max-width: 250px;
-            }
-
-            figcaption {
-                margin-left: 40px;
-                @include sm {
-                    max-width: 250px;
-                    margin: 30px 0 0 0;
-                    text-align: center;
-                }
+        @include responsive($tablets-landscape) {
+            height: unset;
+            padding: 150px 0;
+            p {
+                padding-bottom: 5px;
             }
         }
 
-        h3 {
-            font-weight: 700;
-            font-size: 215%;
-            letter-spacing: -2px;
-        }
-
-        p {
-            font-weight: 300;
-            line-height: 2em;
-            font-size: 120%;
-
-            @include sm {
-                font-size: 16px;
+        @include responsive($tablets) {
+            padding: 0 0 50px 0;
+            p {
+                padding-bottom: 5px;
             }
         }
+
+        @include responsive($phones) {
+            text-align: center;
+            width: calc(100% - 40px);
+            p {
+                padding-bottom: 25px;
+            }
+        }
+
     }
 }
 
@@ -223,29 +287,33 @@ header {
 // =======================================================
 
 #contact-us {
+    background: url("../img/contact-bg.png") no-repeat top right;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include responsive($tablets) {
+        height: unset;
+        padding: 50px 0;
+    }
+    @include responsive($phones) {
+        padding: 20px 0;
+    }
+
     #form {
-        background: url("../img/contact-bg.png") no-repeat top right;
-        background-size: cover;
-        background-attachment: fixed;
+        width: 80%;
 
-        form {
-            margin: 0 auto 120px auto;
-            width: 88%;
-
-            div {
-                clear: both;
-                padding: 0;
-                margin: 0 0 10px 0;
-            }
+        @include responsive($phones) {
+            width: calc(100% - 40px);
         }
 
         h2 {
-            font-weight: 700;
-            font-size: 420%;
-            letter-spacing: -4px;
+            margin-top: 0;
             color: $white;
-            width: 88%;
-            margin: 100px auto 0px auto;
         }
 
         label {
@@ -258,20 +326,31 @@ header {
             border: none;
             border-radius: 0;
             padding: 30px;
+            width: calc(50% - 60px);
+            margin-bottom: 20px;
             font-weight: 300;
             color: $grey;
+            font-size: 16px;
+            outline: none;
 
-            @include sm {
-                font-size: 16px;
+            @include responsive($tablets) {
+                width: calc(100% - 30px);
+                padding: 15px;
             }
         }
 
         button {
-            width: 50%;
             color: $white;
             background: $almost-white;
             text-transform: lowercase;
             padding: 20px;
+            width: 50%;
+
+            @include responsive($tablets) {
+                width: 100%;
+                padding: 15px;
+            }
+
 
             &:hover {
                 background: $pure-grey;
@@ -279,53 +358,97 @@ header {
         }
     }
 
-    #map {
-        h2 {
-            display: none;
-        }
+}
 
+// Map
+// =======================================================
+
+#map {
+    height: 50vh;
+    position: relative;
+
+    h2 {
+        display: none;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &.off {
         iframe {
-            max-height: 100%;
+            pointer-events: none;
         }
     }
 }
 
+// Business Card
+// =======================================================
 
 #business-card {
-    position: relative;
-    width: 90%;
+    max-width: 80%;
     margin: 0 auto;
+    position: relative;
+    height: 0;
+    min-height: unset;
+
+    @include responsive($tablets) {
+        max-width: unset;
+        height: unset;
+    }
 
     address {
         position: absolute;
-        bottom: -74px;
+        bottom: -80px;
+        width: calc(50% - 40px);
         background: $white;
-        padding: 40px 70px 30px 70px;
-        margin: 0;
+        padding: 40px 20px;
         text-align: center;
-        color: $semi-grey;
-        font-weight: 300;
 
-        @include sm {
-            padding: 50px 20px 30px 20px;
-        }
-        
-        @include lg {
+        @include responsive($tablets) {
             position: unset;
-            top: unset;
+            bottom: unset;
+            width: calc(100% - 40px);
         }
-    }
 
-    strong {
-        display: none;
-    }
+        img {
+            padding-bottom: 20px;
+            max-width: 80%;
 
-    p {
-        padding-top: 20px;
-    }
+            @include responsive($phones) {
+                max-width: calc(100% - 20px);
+            }
+        }
 
-    a {
-        color: $semi-grey;
+        strong {
+            display: none;
+        }
+
+        p,
+        span,
+        a {
+            font-size: 16px;
+            font-style: normal;
+            color: $grey;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            line-height: 1.5vw;
+
+            @include responsive($tablets-landscape) {
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
     }
 }
 
@@ -334,64 +457,73 @@ header {
 // =======================================================
 
 footer {
-    font-family: $secondary-font;
-    background: $red;
+    background: $light-red;
 
-    .nav-pills {
-        display: flex;
-        justify-content: center;
+    a {
+        color: $white;
+        font-family: $secondary-font;
+        text-decoration: none;
+        text-transform: lowercase;
+        font-size: 1.1vw;
+
+        @include responsive($tablets-landscape) {
+            font-size: 16px;
+        }
     }
 
-    ul.nav {
-        margin-left: 50%;
+    ul {
+        display: flex;
+        list-style: none;
+        width: 50%;
+        background: $light-red;
+        padding: 0 0 0 50%;
+        margin: 0;
 
-        @include md {
-            margin-left: 0;
+        @include responsive($tablets) {
+            width: 100%;
+            padding: 0;
         }
 
         li {
-            padding: 0;
-            float: left;
             width: 33.33%;
 
             a {
-                color: $white;
-                font-weight: 700;
-                text-transform: lowercase;
-                font-size: 120%;
-                margin: 0;
-                padding-top: 25px;
-                padding-bottom: 25px;
-                border-radius: 0;
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
 
                 &:hover {
-                    background: $light-red;
+                    text-decoration: none;
+                    background: $red;
                 }
             }
         }
     }
-}
 
-#dev {
-    background: $light-red;
-    margin: 0 auto;
-    padding: 20px 0;
-    
-    @include md {
-        text-align: center;
-    }
+    #dev {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        background: $red;
 
-    a {
-        width: 88%;
-        display: block;
-        margin: 0 auto;
-        font-size: 150%;
-        color: rgba(255, 255, 255, 0.2);
+        a {
+            display: inline-block;
+            font-size: 1.5vw;
+            width: 80%;
+            opacity: .3;
 
-        &:hover {
-            color: $white;
-            text-decoration: none;
+            @include responsive($tablets-landscape) {
+                font-size: 16px;
+                text-align: center;
+                opacity: .4;
+            }
+
+            &:hover {
+                opacity: 1;
+                text-decoration: none;
+            }
         }
     }
 }

@@ -51,13 +51,13 @@
 </head>
 
 <body>
-    <div id="wrapper" class="container-fluid">
-        <header id="top" class="row">
-            <div id="logo" class="col-xs-10 col-md-8">
+    <div id="wrapper">
+        <header id="top">
+            <div id="logo">
                 <h1><?php bloginfo('name'); ?></h1>
             </div>
             <!-- /logo -->
-            <div id="services" class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+            <div id="services">
                 <?php
                     if (is_home()) {
                         wp_nav_menu(array(
@@ -74,51 +74,49 @@
         </header>
         <main>
             <section id="about-us">
-                <div id="moto" class="row">
-                    <article class="col-xs-10 col-md-8">
-                        <?php
-                            // query for the about page
-                            $your_query = new WP_Query( 'pagename=about-us' );
-                            // "loop" through query (even though it's just one page)
-                            while ( $your_query->have_posts() ) : $your_query->the_post();
-                        ?>
-                        <h2><?php the_title();?></h2>
-                        <p><?php the_content();?></p>
-                        <?php
-                            endwhile;
-                            // reset post data (important!)
-                            wp_reset_postdata();
-                        ?>
-                    </article>
-                </div>
-                <!-- /moto -->
-                <div id="team" class="row">
+                <article class="col-xs-10 col-md-8">
                     <?php
-                        // query for the our mission page
-                        $your_query = new WP_Query( 'pagename=our-mission' );
+                        // query for the about page
+                        $your_query = new WP_Query( 'pagename=about-us' );
                         // "loop" through query (even though it's just one page)
                         while ( $your_query->have_posts() ) : $your_query->the_post();
                     ?>
-
-                    <figure class="col-lg-12">
-                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail('page-thumb'); } else {?><img src="<?php bloginfo('template_url'); ?>/assets/img/card-photo.png" alt="Card Photo" class="img-responsive"><?php } ?>
-                        <figcaption>
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php the_content(); ?></p>
-                        </figcaption>
-                    </figure>
-
-                    <?php endwhile; ?>
-
+                    <h2><?php the_title();?></h2>
+                    <p><?php the_content();?></p>
                     <?php
-                    wp_reset_postdata();
+                        endwhile;
+                        // reset post data (important!)
+                        wp_reset_postdata();
                     ?>
-                </div>
-                <!-- /team -->
+                </article>
             </section>
-            <!-- /about-us -->
+
+            <section id="mission">
+                <?php
+                    // query for the our mission page
+                    $your_query = new WP_Query( 'pagename=our-mission' );
+                    // "loop" through query (even though it's just one page)
+                    while ( $your_query->have_posts() ) : $your_query->the_post();
+                ?>
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php the_content(); ?></p>
+
+                    <?php if ( has_post_thumbnail() ) { ?>
+                        <figure>
+                            <?php the_post_thumbnail('page-thumb'); ?>
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    <?php } ?> 
+                <?php endwhile; ?>
+
+                <?php
+                wp_reset_postdata();
+                ?>
+            </section>
+
             <section id="contact-us">
-                <div id="form" class="row">
+                <div id="form">
                     <?php
                             // query for the about page
                             $your_query = new WP_Query( 'pagename=contact-us' );
@@ -134,55 +132,53 @@
                     ?>    
                     <span class="clearfix"></span>
                 </div>
-                <!-- /form -->
-                <div id="map" class="row">
-                    <h2><?php the_title(); ?></h2>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <?php
-                            // query for the about page
-                            $your_query = new WP_Query( 'pagename=map' );
-                            // "loop" through query (even though it's just one page)
-                            while ( $your_query->have_posts() ) : $your_query->the_post();
-                        ?>
-                        <p><?php the_content();?></p>
-                        <?php
-                            endwhile;
-                            // reset post data (important!)
-                            wp_reset_postdata();
-                        ?>
-                    </div>
-                </div>
-                <!-- /map -->
-                <div id="business-card" itemscope itemtype="http://schema.org/LocalBusiness" class="row">
-                    <address class="col-md-6">
-                        <?php
-                            // query for the about page
-                            $your_query = new WP_Query( 'pagename=business-card' );
-                            // "loop" through query (even though it's just one page)
-                            while ( $your_query->have_posts() ) : $your_query->the_post();
-                        ?>
-                            <img itemprop="image" src="<?php bloginfo('template_url'); ?>/assets/img/logo-dark.png" alt="Company Logo" class="img-responsive">
-                            <strong itemprop="name"><?php bloginfo('name'); ?></strong>
-                            <p>
-                                <span itemprop="address"><?php echo get_post_meta($post->ID, 'address', true); ?></span>
-                                <br/>
-                                <span itemprop="telephone">
-                                    <a href="tel:<?php echo get_post_meta($post->ID, 'telephone', true); ?>">Tel: <?php echo get_post_meta($post->ID, 'telephone', true); ?></a>
-                                </span> /
-                                <a href="tel:<?php echo get_post_meta($post->ID, 'fax', true); ?>">Fax: <?php echo get_post_meta($post->ID, 'fax', true); ?></a>
-                                <br/>
-                                <a href="mailto:<?php echo get_post_meta($post->ID, 'email', true); ?>"><span itemprop="email"><?php echo get_post_meta($post->ID, 'email', true); ?></span></a>
-                            </p>
-                        <?php
-                            endwhile;
-                            // reset post data (important!)
-                            wp_reset_postdata();
-                        ?>
-                    </address>
-                </div>
-                <!-- /business-card -->
             </section>
-            <!-- contact-us -->
+
+            <section id="map" class="row">
+                <h2><?php the_title(); ?></h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <?php
+                        // query for the about page
+                        $your_query = new WP_Query( 'pagename=map' );
+                        // "loop" through query (even though it's just one page)
+                        while ( $your_query->have_posts() ) : $your_query->the_post();
+                    ?>
+                    <p><?php the_content();?></p>
+                    <?php
+                        endwhile;
+                        // reset post data (important!)
+                        wp_reset_postdata();
+                    ?>
+                </div>
+            </section>
+
+            <section id="business-card" itemscope itemtype="http://schema.org/LocalBusiness">
+                <address>
+                    <?php
+                        // query for the about page
+                        $your_query = new WP_Query( 'pagename=business-card' );
+                        // "loop" through query (even though it's just one page)
+                        while ( $your_query->have_posts() ) : $your_query->the_post();
+                    ?>
+                        <img itemprop="image" src="<?php bloginfo('template_url'); ?>/assets/img/logo-dark.png" alt="Company Logo">
+                        <strong itemprop="name"><?php bloginfo('name'); ?></strong>
+                        <p>
+                            <span itemprop="address"><?php echo get_post_meta($post->ID, 'address', true); ?></span>
+                            <br/>
+                            <span itemprop="telephone">
+                                <a href="tel:<?php echo get_post_meta($post->ID, 'telephone', true); ?>">Tel: <?php echo get_post_meta($post->ID, 'telephone', true); ?></a>
+                            </span> /
+                            <a href="tel:<?php echo get_post_meta($post->ID, 'fax', true); ?>">Fax: <?php echo get_post_meta($post->ID, 'fax', true); ?></a>
+                            <br/>
+                            <a href="mailto:<?php echo get_post_meta($post->ID, 'email', true); ?>"><span itemprop="email"><?php echo get_post_meta($post->ID, 'email', true); ?></span></a>
+                        </p>
+                    <?php
+                        endwhile;
+                        // reset post data (important!)
+                        wp_reset_postdata();
+                    ?>
+                </address>
+            </section>
         </main>
         <footer class="row">
             <?php
@@ -203,9 +199,7 @@
 
     <!-- SCRIPTS -->
     <script async src="<?php bloginfo('template_url'); ?>/vendor/js/jquery-3.3.1.min.js"></script>
-    <script async src="<?php bloginfo('template_url'); ?>/vendor/js/bootstrap.min.js"></script>
     <script async src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script>
     <?php wp_footer(); ?>
 </body>
-
 </html>
