@@ -40,8 +40,7 @@
     <meta property="og:locale" content="en_US">
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/styles.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/styles.css?v=1.1.4">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
@@ -61,11 +60,7 @@
                 <?php
                     if (is_home()) {
                         wp_nav_menu(array(
-                            'menu'             => 'Services',
-                            'container_id'     => 'navbar-services',
-                            'menu_class'       => 'nav',
-                            'before'           => '<span>',
-                            'after'            => '</span>'
+                            'menu'             => 'Services'
                         ));
                     };
                 ?>
@@ -74,7 +69,7 @@
         </header>
         <main>
             <section id="about-us">
-                <article class="col-xs-10 col-md-8">
+                <article>
                     <?php
                         // query for the about page
                         $your_query = new WP_Query( 'pagename=about-us' );
@@ -92,27 +87,29 @@
             </section>
 
             <section id="mission">
-                <?php
-                    // query for the our mission page
-                    $your_query = new WP_Query( 'pagename=our-mission' );
-                    // "loop" through query (even though it's just one page)
-                    while ( $your_query->have_posts() ) : $your_query->the_post();
-                ?>
-                    <h3><?php the_title(); ?></h3>
-                    <p><?php the_content(); ?></p>
+                <article>
+                    <?php
+                        // query for the our mission page
+                        $your_query = new WP_Query( 'pagename=our-mission' );
+                        // "loop" through query (even though it's just one page)
+                        while ( $your_query->have_posts() ) : $your_query->the_post();
+                    ?>
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php the_content(); ?></p>
 
-                    <?php if ( has_post_thumbnail() ) { ?>
-                        <figure>
-                            <?php the_post_thumbnail('page-thumb'); ?>
-                            <figcaption>
-                            </figcaption>
-                        </figure>
-                    <?php } ?> 
-                <?php endwhile; ?>
+                        <?php if ( has_post_thumbnail() ) { ?>
+                            <figure>
+                                <?php the_post_thumbnail('page-thumb'); ?>
+                                <figcaption>
+                                </figcaption>
+                            </figure>
+                        <?php } ?> 
+                    <?php endwhile; ?>
 
-                <?php
-                wp_reset_postdata();
-                ?>
+                    <?php
+                    wp_reset_postdata();
+                    ?>
+                </article>
             </section>
 
             <section id="contact-us">
@@ -134,22 +131,20 @@
                 </div>
             </section>
 
-            <section id="map" class="row">
+            <section id="map" class="off">
                 <h2><?php the_title(); ?></h2>
-                <div class="embed-responsive embed-responsive-16by9">
                     <?php
                         // query for the about page
                         $your_query = new WP_Query( 'pagename=map' );
                         // "loop" through query (even though it's just one page)
                         while ( $your_query->have_posts() ) : $your_query->the_post();
                     ?>
-                    <p><?php the_content();?></p>
+                    <?php the_content();?>
                     <?php
                         endwhile;
                         // reset post data (important!)
                         wp_reset_postdata();
                     ?>
-                </div>
             </section>
 
             <section id="business-card" itemscope itemtype="http://schema.org/LocalBusiness">
