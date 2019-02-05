@@ -26,7 +26,9 @@ const paths = {
         themeName: 'iceberg-boilerplate',
         proxy: 'http://localhost:8888',
         server: 'server',
-        tmp: 'tmp'
+        tmp: 'tmp',
+        dist: './back-end/dist/',
+        src: './back-end/src/'    
     },
 };
 
@@ -106,8 +108,8 @@ function frontendWatch() {
 exports.frontendWatch = frontendWatch
 
 // Build and Deploy
-const frontendDeploy = gulp.series(() => del(paths.frontend.dist), styles, images, scripts, html)
+const frontendBuild = gulp.series(() => del(paths.frontend.dist), styles, images, scripts, html)
 
 // Commands
-gulp.task('deploy', frontendDeploy)
+gulp.task('build', frontendBuild)
 gulp.task('serve', frontendServer)
