@@ -19,6 +19,10 @@
 
 https://glacial.gitlab.io/2017-sylvia-costa-insurance-agency/
 
+## Prototype
+
+https://www.figma.com/proto/aMgiBbyDsvFgMdBkdbuS5gJX/sfcosta-website-layout?node-id=19%3A494&scaling=min-zoom
+
 ## Screenshot
 
 <div style="display: flex; width:100%; justify-content: center;">
