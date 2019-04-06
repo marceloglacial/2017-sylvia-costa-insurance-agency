@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-https://glacial.gitlab.io/2017-sylvia-costa-insurance-agency/
+https://marceloglacial.github.io/2017-sylvia-costa-insurance-agency/front-end/dist/
 
 ## Prototype
 
